@@ -5,7 +5,9 @@ let AllowDomains = datatable(domain:string)
 ];
 let AllowedDomains = toscalar(AllowDomains | summarize make_set(domain));
 EmailEvents
+| where Timestamp > ago(4h)
 | extend RuleForwardToDomain = split(RecipientEmailAddress, "@", 1)
 | extend RuleViolation = array_length(set_difference(RuleForwardToDomain, AllowedDomains)) > 0
 | where isnotempty(ForwardingInformation) and RuleViolation
 | project Timestamp, ReportId, NetworkMessageId, InternetMessageId, SenderMailFromAddress, SenderFromAddress, SenderDisplayName, SenderObjectId, SenderMailFromDomain, SenderFromDomain, RecipientEmailAddress, RuleForwardToDomain, Subject, EmailClusterId, AttachmentCount, UrlCount 
+| sort by Timestamp desc
