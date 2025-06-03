@@ -1,7 +1,7 @@
 let AllowDomains = datatable(domain:string)
 [
     "contoso.com",
-    "contoso.onmicrosoft.com",
+    "contoso.onmicrosoft.com"
 ];
 let AllowedDomains = toscalar(AllowDomains | summarize make_set(domain));
 CloudAppEvents 
