@@ -1,0 +1,11 @@
+let AllowDomains = datatable(domain:string)
+[
+    "contoso.com",
+    "contoso.onmicrosoft.com"
+];
+let AllowedDomains = toscalar(AllowDomains | summarize make_set(domain));
+EmailEvents
+| extend RuleForwardToDomain = split(RecipientEmailAddress, "@", 1)
+| extend RuleViolation = array_length(set_difference(RuleForwardToDomain, AllowedDomains)) > 0
+| where isnotempty(ForwardingInformation) and RuleViolation
+| project Timestamp, ReportId, NetworkMessageId, InternetMessageId, SenderMailFromAddress, SenderFromAddress, SenderDisplayName, SenderObjectId, SenderMailFromDomain, SenderFromDomain, RecipientEmailAddress, RuleForwardToDomain, Subject, EmailClusterId, AttachmentCount, UrlCount 
