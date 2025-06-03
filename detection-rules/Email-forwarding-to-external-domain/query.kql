@@ -34,5 +34,5 @@ CloudAppEvents
 | where RuleViolation
 | project Timestamp, ReportId, ActionType, Application, AccountObjectId, AccountId, AccountDisplayName, AccountType, AccountMailbox, AuditSource, IPAddress, 
     RuleActivityType=ActivityType, RuleName=ObjectName, RuleForwardTo=ForwardToList, RuleForwardAsAttachmentTo=ForwardAsAttachmentToList, RuleRedirectTo=RedirectToList, RuleFrom=FromList, RuleViolatingDomains=ForwardDomains
-| extend EventDescription = strcat("User ", AccountMailbox, " has created a new rule '", RuleName, "' that forwards messages to one or more external domains: ", RuleViolatingDomains)
+| extend EventDescription = strcat("User ", AccountMailbox, " has created a new rule '", RuleName, "' in Outlook that forwards messages to one or more external domains: ", RuleViolatingDomains)
 | sort by Timestamp desc
