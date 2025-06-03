@@ -1,0 +1,38 @@
+let AllowDomains = datatable(domain:string)
+[
+    "contoso.com",
+    "contoso.onmicrosoft.com",
+];
+let AllowedDomains = toscalar(AllowDomains | summarize make_set(domain));
+CloudAppEvents 
+| where Timestamp > ago(7d)
+| where ActionType in ("Set-InboxRule", "New-InboxRule")
+| extend Parameters = parse_json(parse_json(RawEventData).Parameters)
+| extend AccountMailbox = tostring(parse_json(parse_json(RawEventData).UserKey))
+| extend ForwardAsAttachmentTo = "", ForwardTo = "", RedirectTo = "", From = ""
+| project Timestamp, ActionType, Application, AccountObjectId, AccountId, AccountDisplayName, AccountMailbox, IPAddress, ActivityType, ObjectName, ReportId, AccountType, RawEventData, AuditSource, Parameters
+| mv-apply param = Parameters on (
+    where param.Name in~ ("ForwardAsAttachmentTo", "ForwardTo", "RedirectTo", "From")
+    | extend Name = tostring(param.Name), Value = tostring(param.Value)
+)
+| summarize
+    ForwardAsAttachmentTo = anyif(Value, Name == "ForwardAsAttachmentTo"),
+    ForwardTo = anyif(Value, Name == "ForwardTo"),
+    RedirectTo = anyif(Value, Name == "RedirectTo"),
+    From = anyif(Value, Name == "From")
+    by Timestamp, ActionType, Application, AccountObjectId, AccountId, AccountDisplayName, AccountMailbox, IPAddress, ActivityType, ObjectName, ReportId, AccountType, AuditSource
+| mv-apply recipient = array_concat(split(ForwardTo, ";"), split(ForwardAsAttachmentTo, ";"), split(RedirectTo, ";")) on (
+    extend domain = extract(@"@(.+)$", 1, trim(" ", tostring(recipient)))
+    | where isnotempty(domain)
+)
+| summarize ForwardDomains = make_set(domain) by Timestamp, ActionType, Application, AccountObjectId, AccountId, AccountDisplayName, AccountMailbox, IPAddress, ActivityType, ObjectName, ReportId, AccountType, AuditSource, ForwardTo, ForwardAsAttachmentTo, RedirectTo, From
+| extend ForwardToList = split(ForwardTo, ";")
+| extend ForwardAsAttachmentToList = split(ForwardAsAttachmentTo, ";")
+| extend RedirectToList = split(RedirectTo, ";")
+| extend FromList = split(From, ";")
+| extend RuleViolation = array_length(set_difference(ForwardDomains, AllowedDomains)) > 0
+| where RuleViolation
+| project Timestamp, ReportId, ActionType, Application, AccountObjectId, AccountId, AccountDisplayName, AccountType, AccountMailbox, AuditSource, IPAddress, 
+    RuleActivityType=ActivityType, RuleName=ObjectName, RuleForwardTo=ForwardToList, RuleForwardAsAttachmentTo=ForwardAsAttachmentToList, RuleRedirectTo=RedirectToList, RuleFrom=FromList, RuleViolatingDomains=ForwardDomains
+| extend EventDescription = strcat("User ", AccountMailbox, " has created a new rule '", RuleName, "' that forwards messages to one or more external domains: ", RuleViolatingDomains)
+| sort by Timestamp desc
