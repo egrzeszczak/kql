@@ -1,0 +1,40 @@
+let AllowedDomains = datatable(domain:string)
+[
+    "contoso.com",
+    "contoso.onmicrosoft.com"
+];
+CloudAppEvents
+| where Timestamp > ago(7d)
+| where ActionType == "UpdateInboxRules"
+| extend AccountMailbox = tostring(parse_json(RawEventData).UserId)
+| project Timestamp, ActionType, Application, AccountObjectId, AccountId, AccountDisplayName, AccountMailbox, IPAddress, ActivityType, ObjectName, ObjectType, ReportId, AccountType, RawEventData, AuditSource
+| mv-apply item = parse_json(RawEventData).OperationProperties on 
+  (
+    extend Name = tostring(item.Name), Value = tostring(item.Value)
+  )
+| summarize 
+    RuleOperation = anyif(Value, Name == "RuleOperation"),
+    RuleName = anyif(Value, Name == "RuleName"),
+    RuleActions = anyif(Value, Name == "RuleActions"),
+    RuleCondition = anyif(Value, Name == "RuleCondition"),
+    RuleState = anyif(Value, Name == "RuleState") by Timestamp, ActionType, Application, AccountObjectId, AccountId, AccountDisplayName, AccountMailbox, IPAddress, ActivityType, ObjectName, ObjectType, ReportId, AccountType, AuditSource
+| extend Actions = parse_json(RuleActions)
+| mv-expand Action = Actions
+| extend 
+    ActionTypes = tostring(Action.ActionType),
+    Recipients = Action.Recipients,
+    ForwardFlags = tostring(Action.ForwardFlags)
+| summarize 
+    RuleActionTypes = make_set(ActionTypes),
+    RuleRecipients = make_set(Recipients),
+    RuleForwardFlags = make_set(ForwardFlags)
+    by Timestamp, ActionType, Application, AccountObjectId, AccountId, AccountDisplayName, AccountMailbox, IPAddress, ActivityType, ObjectName, ObjectType, ReportId, AccountType, AuditSource, RuleOperation, RuleName, RuleActions, RuleCondition
+| where RuleActionTypes has_any ("Forward")
+| mv-expand RuleForwardTo = RuleRecipients
+| extend RuleViolatingDomains = tostring(split(RuleForwardTo, "@")[1])
+| extend RuleViolation = iif(RuleViolatingDomains !in (AllowedDomains), true, false)
+| where RuleViolation
+| project Timestamp, ReportId, ActionType = RuleOperation, Application, AccountObjectId, AccountId, AccountDisplayName, AccountMailbox, AccountType, AuditSource, IPAddress, 
+    RuleActivityType = RuleOperation, RuleName, RuleActionTypes, RuleActions, RuleCondition, RuleRecipients, RuleForwardFlags, RuleForwardTo, RuleViolatingDomains
+| extend EventDescription = strcat("User ", AccountMailbox, " has created a new rule '", RuleName, "' in Outlook (Classic) that forwards messages to one or more external domains: ", RuleViolatingDomains)
+| sort by Timestamp desc
