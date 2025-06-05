@@ -1,0 +1,6 @@
+DeviceEvents
+| where Timestamp > ago(4h)
+| where ActionType in ("SmartScreenUrlWarning", "ExploitGuardNetworkProtectionBlocked")
+| where RemoteUrl matches regex ".contoso.com"
+| project Timestamp, DeviceId, DeviceName, ActionType, RemoteUrl, InitiatingProcessFileName, InitiatingProcessAccountName, InitiatingProcessAccountUpn, InitiatingProcessAccountObjectId, ReportId, AdditionalFields
+| sort by Timestamp desc
