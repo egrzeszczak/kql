@@ -1,0 +1,14 @@
+let RuleId = "00000000-0000-0000-0000-000000000000"; // Configure: copy your Conditional Access rule ID here
+AADSignInEventsBeta
+| where Timestamp > ago(1h)
+| mv-apply policy = parse_json(ConditionalAccessPolicies) on (
+    where policy.result == "failure"
+    | project CARuleId = policy.id, CARuleDisplayName = policy.displayName, CARuleResult = policy.result
+)
+| where CARuleId == RuleId
+| project Timestamp, ReportId, Application, ErrorCode, 
+    AccountDisplayName, AccountObjectId, AccountUpn, OSPlatform, UserAgent, Browser, IPAddress, Country, City,
+    ResourceDisplayName, ResourceId, AuthenticationRequirement,
+    ConditionalAccessPolicies, ConditionalAccessStatus, 
+    CARuleId, CARuleDisplayName, CARuleResult
+| sort by Timestamp desc
