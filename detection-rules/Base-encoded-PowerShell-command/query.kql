@@ -1,0 +1,16 @@
+let MonitoredFlags = dynamic(['-encodedcommand', '-enc']); 
+DeviceProcessEvents
+| where Timestamp > ago(24h)
+| where ProcessCommandLine contains "powershell" or InitiatingProcessCommandLine contains "powershell"
+| where ProcessCommandLine has_any (MonitoredFlags) or InitiatingProcessCommandLine has_any (MonitoredFlags)
+| extend CommandLineBase64String = extract(@'\s+([A-Za-z0-9+/]{20}\S+$)', 1, ProcessCommandLine)
+| extend ProcessDecodedCommandLine = base64_decode_tostring(CommandLineBase64String)
+| extend ProcessDecodedCommandLineReadable = replace_string(ProcessDecodedCommandLine, '\u0000', '')
+| where isnotempty(CommandLineBase64String) and isnotempty(ProcessDecodedCommandLineReadable)
+| project Timestamp, ReportId, DeviceId, DeviceName, ActionType, 
+    AccountDomain, AccountName, AccountSid, 
+    ProcessIntegrityLevel, InitiatingProcessFileName, InitiatingProcessCommandLine, 
+    ProcessCommandLine, ProcessDecodedCommandLineReadable
+// You can also specify some exceptions
+// | where InitiatingProcessFileName != "wsl.exe" and ProcessDecodedCommandLineReadable != @"Start ""http://localhost:3000/"""
+// | where InitiatingProcessFileName != @"svchost.exe" and ProcessDecodedCommandLineReadable != @"Start-Sleep -seconds 30;&{Invoke-WmiMethod -Namespace ""root\ccm"" -Class ""sms_client"" -Name TriggerSchedule ""{00000000-0000-0000-0000-000000000121}""}"
