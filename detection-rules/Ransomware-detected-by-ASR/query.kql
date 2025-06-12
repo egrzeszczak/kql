@@ -1,0 +1,10 @@
+DeviceEvents
+| where Timestamp > ago(24h)
+| where ActionType in ('AsrRansomwareBlocked', 'AsrRansomwareAudited')
+| project ActionType, ReportId, Timestamp, DeviceId, DeviceName, SHA256, FileName, FolderPath, 
+    ProcessSHA256 = InitiatingProcessSHA256, 
+    ProcessName = InitiatingProcessFileName, 
+    SourceUser = InitiatingProcessAccountName, 
+    SourceUserId = InitiatingProcessAccountObjectId, 
+    SourceUserSid = InitiatingProcessAccountSid,
+    AdditionalFields
