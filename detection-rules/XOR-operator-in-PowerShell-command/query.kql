@@ -1,0 +1,6 @@
+let EncodedList = dynamic(['-xor', '-bxor']); 
+DeviceProcessEvents
+| where Timestamp > ago(30d)
+| where ProcessCommandLine contains "powershell" or InitiatingProcessCommandLine contains "powershell"
+| where ProcessCommandLine has_any (EncodedList) or InitiatingProcessCommandLine has_any (EncodedList)
+| project Timestamp, ReportId, DeviceId, DeviceName, ActionType, AccountDomain, AccountName, AccountSid, ProcessIntegrityLevel, InitiatingProcessFileName, InitiatingProcessCommandLine, ProcessCommandLine
