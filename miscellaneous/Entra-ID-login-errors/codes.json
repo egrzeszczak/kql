@@ -547,7 +547,7 @@
     {
         "ErrorCode": "50140",
         "ErrorCodeName": "AADSTS50140",
-        "ErrorDescription": "KmsiInterrupt - This error occurred due to Keep me signed in interrupt when the user was signing-in. This is an expected part of the sign in flow - where a user is asked if they want to remain signed into their current browser to make further logins easier. For more information - see The new Microsoft Entra sign-in and “Keep me signed in” experiences rolling out now!. You can open a support ticket with Correlation ID - Request ID - and Error code to get more details."
+        "ErrorDescription": "KmsiInterrupt - This error occurred due to Keep me signed in interrupt when the user was signing-in. This is an expected part of the sign in flow - where a user is asked if they want to remain signed into their current browser to make further logins easier. For more information - see The new Microsoft Entra sign-in and âKeep me signed inâ experiences rolling out now!. You can open a support ticket with Correlation ID - Request ID - and Error code to get more details."
     },
     {
         "ErrorCode": "50141",
@@ -1823,5 +1823,65 @@
         "ErrorCode": "700007",
         "ErrorCodeName": "AADSTS700007",
         "ErrorDescription": "The grant was issued for a different client id."
+    },
+    {
+        "ErrorCode": "70045",
+        "ErrorCodeName": "AADSTS70045",
+        "ErrorDescription": "The refresh token is invalid due to sign-in frequency checks by conditional access. Additionally since the sign-in frequency policy applies to all applications the token will never be usable and should be deleted. The authInstant in this token was {authInstant} and the maximum allowed lifetime for this request is {time}."
+    },
+    {
+        "ErrorCode": "901182",
+        "ErrorCodeName": "AADSTS901182",
+        "ErrorDescription": "Application '{applicationId}' must be preauthorized by Microsoft Graph for scopes '{scope}'."
+    },
+    {
+        "ErrorCode": "700003",
+        "ErrorCodeName": "AADSTS700003",
+        "ErrorDescription": "Device object was not found in the tenant '{tenantName}' directory."
+    },
+    {
+        "ErrorCode": "500112",
+        "ErrorCodeName": "AADSTS500112",
+        "ErrorDescription": "Invalid grant due to the following reasons: Requested SAML 2.0 assertion has invalid Subject Confirmation Method; Application On-Behalf-Of flow is not supported on V2; Primary refresh token is not signed with session key; Invalid external refresh token; The access grant was obtained for a different tenant."
+    },
+    {
+        "ErrorCode": "700059",
+        "ErrorCodeName": "AADSTS700059",
+        "ErrorDescription": "This token can only be redeemed at tenant '{tenantId}'."
+    },
+    {
+        "ErrorCode": "700046",
+        "ErrorCodeName": "AADSTS700046",
+        "ErrorDescription": "Invalid Reply Address. Reply Address must have scheme brk-{brkApplicationId}:// and be of Single Page Application type."
+    },
+    {
+        "ErrorCode": "500202",
+        "ErrorCodeName": "AADSTS500202",
+        "ErrorDescription": "User account '{email}' is a personal Microsoft account but the client or resource applications do not have direct Microsoft account support enabled. For external account support use the /organizations or the tenanted endpoint."
+    },
+    {
+        "ErrorCode": "500883",
+        "ErrorCodeName": "AADSTS500883",
+        "ErrorDescription": "Limit on telecom MFA calls reached. Please retry with CompanionAppsNotification or try again in a few minutes."
+    },
+    {
+        "ErrorCode": "50184",
+        "ErrorCodeName": "AADSTS50184",
+        "ErrorDescription": "OTP is incorrect or no cache entry exists for the tenant/user."
+    },
+    {
+        "ErrorCode": "500131",
+        "ErrorCodeName": "AADSTS500131",
+        "ErrorDescription": "Assertion audience does not match the Client app presenting the assertion. The audience in the assertion was '{tokenAudience}' and the expected audience is '{expectedAudience}' or one of the Application Uris of this application with App ID '{appId}'({appName}). The downstream client must request a token for the expected audience (the application that made the OBO request) and this application should use that token as the assertion."
+    },
+    {
+        "ErrorCode": "500344",
+        "ErrorCodeName": "AADSTS500344",
+        "ErrorDescription": "User Account is not found for Fido Sign in flow."
+    },
+    {
+        "ErrorCode": "530001",
+        "ErrorCodeName": "AADSTS530001",
+        "ErrorDescription": "Browser not supported. The user is using a browser that does not support device identification so the device state is unknown. Access to the resource requires a compliant device. To see a list of browsers that support device identification see https://learn.microsoft.com/entra/identity/conditional-access/concept-conditional-access-conditions#supported-browsers"
     }
 ]
