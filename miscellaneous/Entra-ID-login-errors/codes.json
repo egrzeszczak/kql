@@ -1707,6 +1707,121 @@
     {
         "ErrorCode": "9002341",
         "ErrorCodeName": "AADSTS9002341",
-        "ErrorDescription": "V2Error: invalid_grant - The user is required to permit single sign-On (SSO). This error occurs when the user has not granted the necessary permissions for the application to perform SSO. The user should be redirected to the consent screen to grant the necessary permissions. Refer to this announcement for more information.\n901011,AADSTS901011,NoEmailAddressCollectedFromExternalOidcIDP - No email address was obtained from the external OpenID Connect (OIDC) identity provider. This usually happens when the user selects Hide my email upon signing up.\n901012,AADSTS901012,EmailAddressCollectedFromExternalOidcIDPNotVerified - No verified email address was obtained from the identity provider. The email address is not verified in the ID token from the external OIDC identity provider.\n901014,AADSTS901014,NoExternalIdentifierCollectedFromExternalOidcIDP - The external identifier does not exist in the ID token from the external OIDC identity provider.\n650059,AADSTS650059,The application is not configured for use in the tenant. The value AzureADMyOrg set for application property signInAudience is limiting its use in the tenant.\n500571,AADSTS500571,The guest user account is disabled.\n5000611,AADSTS5000611,Symmetric Key Derivation Function version '{version}' is invalid. Update the device for the latest updates. '{optionalMessage}'\n500121,AADSTS500121,Authentication failed during strong authentication request. The user didn't complete the MFA prompt. They may have decided not to authenticate timed out while doing other work or has an issue with their authentication setup.\n530002,AADSTS530002,Your device is required to be compliant to access this resource. The requested resource can only be accessed using a compliant device. The user is using a device already managed by a Mobile-Device-Management (MDM) agent like Intune but it's not being reported as compliant yet. The user could check with your MDM provider on how to become compliant. More details available at https://support.microsoft.com/account-billing/troubleshooting-compliance-error-messages-for-a-work-or-school-account-479a9c42-d9d1-4e44-9e90-24bbad96c251\n7000022,AADSTS7000022,VSM Binding Key missing from Ticket Granting Ticket request.\n399218,AADSTS399218,For security reasons user confirmation is required to sign in to this tenant.\n1003033,AADSTS1003033,The remote ngc session was denied.\n530003,AADSTS530003,Your device is required to be managed to access this resource. The requested resource can only be accessed using a compliant device. The user is either using a device not managed by a Mobile-Device-Management (MDM) agent like Intune or it's using an application that doesn't support device authentication. The user could enroll their devices with an approved MDM provider or use a different app to sign in or find the app vendor and ask them to update their app. More details available at https://support.microsoft.com/account-billing/troubleshooting-compliance-error-messages-for-a-work-or-school-account-479a9c42-d9d1-4e44-9e90-24bbad96c251\n70044,AADSTS70044,The session has expired or is invalid due to sign-in frequency checks by conditional access.\n54006,AADSTS54006,Unencrypted v2 access tokens are not supported for first party applications that support consumer accounts. The resource must add a certificate to the onboarding portal to encrypt tokens.\n50201,AADSTS50201,This message prompt interrupt will be shown to the user during login when additional information should be provided to user.\n500142,AADSTS500142,The user's redemption is complete and the sign-in should continue.\n501314,AADSTS501314,Silent interrupt required to recognize browser capabilities. Used to differentiate between Safari running in iPadOS or Mac. No action required this is expected as part of determining device identities due to application or conditional access requirements.\n530036,AADSTS530036,The refresh token is invalid due to authentication flow checks by Conditional Access. Additionally since the authentication flows policy applies to all applications the token will never be usable and should be deleted. The token presented to Entra is protocol tracked as either device code flow or authentication transfer resulting in Conditional Access policy enforcement. Interaction is required in order to obtain a new token. For additional information please visit https://aka.ms/authenticationflows\n399287,AADSTS399287,Multi-factor authentication method is blocked.\n9002342,AADSTS9002342,User denied SSO permission.\n70037,AADSTS70037,Incorrect challenge response provided. Remote auth session denied.\n50181,AADSTS50181,Unable to validate the otp.\n700007,AADSTS700007,The grant was issued for a different client id.\n"
+        "ErrorDescription": "V2Error: invalid_grant - The user is required to permit single sign-On (SSO). This error occurs when the user has not granted the necessary permissions for the application to perform SSO. The user should be redirected to the consent screen to grant the necessary permissions. Refer to this announcement for more information."
+    },
+    {
+        "ErrorCode": "901011",
+        "ErrorCodeName": "AADSTS901011",
+        "ErrorDescription": "NoEmailAddressCollectedFromExternalOidcIDP - No email address was obtained from the external OpenID Connect (OIDC) identity provider. This usually happens when the user selects Hide my email upon signing up."
+    },
+    {
+        "ErrorCode": "901012",
+        "ErrorCodeName": "AADSTS901012",
+        "ErrorDescription": "EmailAddressCollectedFromExternalOidcIDPNotVerified - No verified email address was obtained from the identity provider. The email address is not verified in the ID token from the external OIDC identity provider."
+    },
+    {
+        "ErrorCode": "901014",
+        "ErrorCodeName": "AADSTS901014",
+        "ErrorDescription": "NoExternalIdentifierCollectedFromExternalOidcIDP - The external identifier does not exist in the ID token from the external OIDC identity provider."
+    },
+    {
+        "ErrorCode": "650059",
+        "ErrorCodeName": "AADSTS650059",
+        "ErrorDescription": "The application is not configured for use in the tenant. The value AzureADMyOrg set for application property signInAudience is limiting its use in the tenant."
+    },
+    {
+        "ErrorCode": "500571",
+        "ErrorCodeName": "AADSTS500571",
+        "ErrorDescription": "The guest user account is disabled."
+    },
+    {
+        "ErrorCode": "5000611",
+        "ErrorCodeName": "AADSTS5000611",
+        "ErrorDescription": "Symmetric Key Derivation Function version '{version}' is invalid. Update the device for the latest updates. '{optionalMessage}'"
+    },
+    {
+        "ErrorCode": "500121",
+        "ErrorCodeName": "AADSTS500121",
+        "ErrorDescription": "Authentication failed during strong authentication request. The user didn't complete the MFA prompt. They may have decided not to authenticate timed out while doing other work or has an issue with their authentication setup."
+    },
+    {
+        "ErrorCode": "530002",
+        "ErrorCodeName": "AADSTS530002",
+        "ErrorDescription": "Your device is required to be compliant to access this resource. The requested resource can only be accessed using a compliant device. The user is using a device already managed by a Mobile-Device-Management (MDM) agent like Intune but it's not being reported as compliant yet. The user could check with your MDM provider on how to become compliant. More details available at https://support.microsoft.com/account-billing/troubleshooting-compliance-error-messages-for-a-work-or-school-account-479a9c42-d9d1-4e44-9e90-24bbad96c251"
+    },
+    {
+        "ErrorCode": "7000022",
+        "ErrorCodeName": "AADSTS7000022",
+        "ErrorDescription": "VSM Binding Key missing from Ticket Granting Ticket request."
+    },
+    {
+        "ErrorCode": "399218",
+        "ErrorCodeName": "AADSTS399218",
+        "ErrorDescription": "For security reasons user confirmation is required to sign in to this tenant."
+    },
+    {
+        "ErrorCode": "1003033",
+        "ErrorCodeName": "AADSTS1003033",
+        "ErrorDescription": "The remote ngc session was denied."
+    },
+    {
+        "ErrorCode": "530003",
+        "ErrorCodeName": "AADSTS530003",
+        "ErrorDescription": "Your device is required to be managed to access this resource. The requested resource can only be accessed using a compliant device. The user is either using a device not managed by a Mobile-Device-Management (MDM) agent like Intune or it's using an application that doesn't support device authentication. The user could enroll their devices with an approved MDM provider or use a different app to sign in or find the app vendor and ask them to update their app. More details available at https://support.microsoft.com/account-billing/troubleshooting-compliance-error-messages-for-a-work-or-school-account-479a9c42-d9d1-4e44-9e90-24bbad96c251"
+    },
+    {
+        "ErrorCode": "70044",
+        "ErrorCodeName": "AADSTS70044",
+        "ErrorDescription": "The session has expired or is invalid due to sign-in frequency checks by conditional access."
+    },
+    {
+        "ErrorCode": "54006",
+        "ErrorCodeName": "AADSTS54006",
+        "ErrorDescription": "Unencrypted v2 access tokens are not supported for first party applications that support consumer accounts. The resource must add a certificate to the onboarding portal to encrypt tokens."
+    },
+    {
+        "ErrorCode": "50201",
+        "ErrorCodeName": "AADSTS50201",
+        "ErrorDescription": "This message prompt interrupt will be shown to the user during login when additional information should be provided to user."
+    },
+    {
+        "ErrorCode": "500142",
+        "ErrorCodeName": "AADSTS500142",
+        "ErrorDescription": "The user's redemption is complete and the sign-in should continue."
+    },
+    {
+        "ErrorCode": "501314",
+        "ErrorCodeName": "AADSTS501314",
+        "ErrorDescription": "Silent interrupt required to recognize browser capabilities. Used to differentiate between Safari running in iPadOS or Mac. No action required this is expected as part of determining device identities due to application or conditional access requirements."
+    },
+    {
+        "ErrorCode": "530036",
+        "ErrorCodeName": "AADSTS530036",
+        "ErrorDescription": "The refresh token is invalid due to authentication flow checks by Conditional Access. Additionally since the authentication flows policy applies to all applications the token will never be usable and should be deleted. The token presented to Entra is protocol tracked as either device code flow or authentication transfer resulting in Conditional Access policy enforcement. Interaction is required in order to obtain a new token. For additional information please visit https://aka.ms/authenticationflows"
+    },
+    {
+        "ErrorCode": "399287",
+        "ErrorCodeName": "AADSTS399287",
+        "ErrorDescription": "Multi-factor authentication method is blocked."
+    },
+    {
+        "ErrorCode": "9002342",
+        "ErrorCodeName": "AADSTS9002342",
+        "ErrorDescription": "User denied SSO permission."
+    },
+    {
+        "ErrorCode": "70037",
+        "ErrorCodeName": "AADSTS70037",
+        "ErrorDescription": "Incorrect challenge response provided. Remote auth session denied."
+    },
+    {
+        "ErrorCode": "50181",
+        "ErrorCodeName": "AADSTS50181",
+        "ErrorDescription": "Unable to validate the otp."
+    },
+    {
+        "ErrorCode": "700007",
+        "ErrorCodeName": "AADSTS700007",
+        "ErrorDescription": "The grant was issued for a different client id."
     }
 ]
