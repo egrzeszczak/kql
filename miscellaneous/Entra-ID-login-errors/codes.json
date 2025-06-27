@@ -1,0 +1,1712 @@
+[
+    {
+        "ErrorCode": "16000",
+        "ErrorCodeName": "AADSTS16000",
+        "ErrorDescription": "InteractionRequired - User account '{EmailHidden}' from identity provider '{idp}' doesn't exist in tenant '{tenant}' and can't access the application '{appid}'({appName}) in that tenant. This account needs to be added as an external user in the tenant first. Sign out and sign in again with a different Microsoft Entra user account. This error is fairly common when you try to sign in to Microsoft Entra admin center by using personal Microsoft Account and no directory associated with it."
+    },
+    {
+        "ErrorCode": "16001",
+        "ErrorCodeName": "AADSTS16001",
+        "ErrorDescription": "UserAccountSelectionInvalid - You see this error if the user selects on a tile that the session select logic has rejected. When triggered - this error allows the user to recover by picking from an updated list of tiles/sessions - or by choosing another account. This error can occur because of a code defect or race condition."
+    },
+    {
+        "ErrorCode": "16002",
+        "ErrorCodeName": "AADSTS16002",
+        "ErrorDescription": "AppSessionSelectionInvalid - The app-specified SID requirement wasn't met."
+    },
+    {
+        "ErrorCode": "160021",
+        "ErrorCodeName": "AADSTS160021",
+        "ErrorDescription": "AppSessionSelectionInvalidSessionNotExist - Application requested a user session that doesn't exist. This issue can be resolved by creating new Azure account."
+    },
+    {
+        "ErrorCode": "16003",
+        "ErrorCodeName": "AADSTS16003",
+        "ErrorDescription": "SsoUserAccountNotFoundInResourceTenant - Indicates that the user hasn't been explicitly added to the tenant."
+    },
+    {
+        "ErrorCode": "17003",
+        "ErrorCodeName": "AADSTS17003",
+        "ErrorDescription": "CredentialKeyProvisioningFailed - Microsoft Entra ID can't provision the user key."
+    },
+    {
+        "ErrorCode": "20001",
+        "ErrorCodeName": "AADSTS20001",
+        "ErrorDescription": "WsFedSignInResponseError - There's an issue with your federated Identity Provider. Contact your IDP to resolve this issue."
+    },
+    {
+        "ErrorCode": "20012",
+        "ErrorCodeName": "AADSTS20012",
+        "ErrorDescription": "WsFedMessageInvalid - There's an issue with your federated Identity Provider. Contact your IDP to resolve this issue."
+    },
+    {
+        "ErrorCode": "20033",
+        "ErrorCodeName": "AADSTS20033",
+        "ErrorDescription": "FedMetadataInvalidTenantName - There's an issue with your federated Identity Provider. Contact your IDP to resolve this issue."
+    },
+    {
+        "ErrorCode": "230109",
+        "ErrorCodeName": "AADSTS230109",
+        "ErrorDescription": "CachedCredentialNonGWAuthNRequestsNotSupported - Backup Auth Service only allows AuthN requests from Microsoft Entra Gateway. This error is returned when traffic targets the backup auth service directly instead of going through the reverse proxy."
+    },
+    {
+        "ErrorCode": "28002",
+        "ErrorCodeName": "AADSTS28002",
+        "ErrorDescription": "Provided value for the input parameter scope '{scope}' isn't valid when requesting an access token. Specify a valid scope."
+    },
+    {
+        "ErrorCode": "28003",
+        "ErrorCodeName": "AADSTS28003",
+        "ErrorDescription": "Provided value for the input parameter scope can't be empty when requesting an access token using the provided authorization code. Specify a valid scope."
+    },
+    {
+        "ErrorCode": "399284",
+        "ErrorCodeName": "AADSTS399284",
+        "ErrorDescription": "InboundIdTokenIssuerInvalid - The inbound ID token received in the federation has an invalid issuer. Either it is empty - or it does not match the realm identifier."
+    },
+    {
+        "ErrorCode": "40008",
+        "ErrorCodeName": "AADSTS40008",
+        "ErrorDescription": "OAuth2IdPUnretryableServerError - There's an issue with your federated Identity Provider. Contact your IDP to resolve this issue."
+    },
+    {
+        "ErrorCode": "40009",
+        "ErrorCodeName": "AADSTS40009",
+        "ErrorDescription": "OAuth2IdPRefreshTokenRedemptionUserError - There's an issue with your federated Identity Provider. Contact your IDP to resolve this issue."
+    },
+    {
+        "ErrorCode": "40010",
+        "ErrorCodeName": "AADSTS40010",
+        "ErrorDescription": "OAuth2IdPRetryableServerError - There's an issue with your federated Identity Provider. Contact your IDP to resolve this issue."
+    },
+    {
+        "ErrorCode": "40015",
+        "ErrorCodeName": "AADSTS40015",
+        "ErrorDescription": "OAuth2IdPAuthCodeRedemptionUserError - There's an issue with your federated Identity Provider. Contact your IDP to resolve this issue."
+    },
+    {
+        "ErrorCode": "50000",
+        "ErrorCodeName": "AADSTS50000",
+        "ErrorDescription": "TokenIssuanceError - There's an issue with the sign-in service. Open a support ticket to resolve this issue."
+    },
+    {
+        "ErrorCode": "50001",
+        "ErrorCodeName": "AADSTS50001",
+        "ErrorDescription": "InvalidResource - The resource is disabled or doesn't exist. Check your app's code to ensure that you have specified the exact resource URL for the resource you're trying to access."
+    },
+    {
+        "ErrorCode": "50002",
+        "ErrorCodeName": "AADSTS50002",
+        "ErrorDescription": "NotAllowedTenant - Sign-in failed because of a restricted proxy access on the tenant. If it's your own tenant policy - you can change your restricted tenant settings to fix this issue."
+    },
+    {
+        "ErrorCode": "500011",
+        "ErrorCodeName": "AADSTS500011",
+        "ErrorDescription": "InvalidResourceServicePrincipalNotFound - The resource principal named {name} wasn't found in the tenant named {tenant}. This can happen if the application hasn't been installed by the administrator of the tenant or consented to by any user in the tenant. You might have sent your authentication request to the wrong tenant. If you expect the app to be installed - you might need to provide administrator permissions to add it. Check with the developers of the resource and application to understand what the right setup for your tenant is."
+    },
+    {
+        "ErrorCode": "500014",
+        "ErrorCodeName": "AADSTS500014",
+        "ErrorDescription": "InvalidResourceServicePrincipalDisabled - The service principal for resource '{identifier}' is disabled. This indicates that a subscription within the tenant has lapsed - or that an administrator for this tenant has disabled the application's service principal - preventing tokens from being issued for it. For more information - see Disable user sign-in for application."
+    },
+    {
+        "ErrorCode": "500021",
+        "ErrorCodeName": "AADSTS500021",
+        "ErrorDescription": "Access to '{tenant}' tenant is denied. AADSTS500021 indicates that the tenant restriction feature is configured and that the user is trying to access a tenant that isn't in the list of allowed tenants specified in the header Restrict-Access-To-Tenant. For more information - see Use tenant restrictions to manage access to SaaS cloud applications."
+    },
+    {
+        "ErrorCode": "500022",
+        "ErrorCodeName": "AADSTS500022",
+        "ErrorDescription": "Access to '{tenant}' tenant is denied. AADSTS500022 indicates that the tenant restriction feature is configured and that the user is trying to access a tenant that isn't in the list of allowed tenants specified in the header Restrict-Access-To-Tenant. For more information - see Use tenant restrictions to manage access to SaaS cloud applications."
+    },
+    {
+        "ErrorCode": "50003",
+        "ErrorCodeName": "AADSTS50003",
+        "ErrorDescription": "MissingSigningKey - Sign-in failed because of a missing signing key or certificate. This might be because there was no signing key configured in the app. To learn more - see the troubleshooting article for error AADSTS50003. If you still see issues - contact the app owner or an app admin."
+    },
+    {
+        "ErrorCode": "50005",
+        "ErrorCodeName": "AADSTS50005",
+        "ErrorDescription": "DevicePolicyError - User tried to sign in to a device from a platform not currently supported through Conditional Access policy."
+    },
+    {
+        "ErrorCode": "50006",
+        "ErrorCodeName": "AADSTS50006",
+        "ErrorDescription": "InvalidSignature - Signature verification failed because of an invalid signature."
+    },
+    {
+        "ErrorCode": "50007",
+        "ErrorCodeName": "AADSTS50007",
+        "ErrorDescription": "PartnerEncryptionCertificateMissing - The partner encryption certificate wasn't found for this app. Open a support ticket with Microsoft to get this fixed."
+    },
+    {
+        "ErrorCode": "50008",
+        "ErrorCodeName": "AADSTS50008",
+        "ErrorDescription": "InvalidSamlToken - SAML assertion is missing or misconfigured in the token. Contact your federation provider."
+    },
+    {
+        "ErrorCode": "5000224",
+        "ErrorCodeName": "AADSTS5000224",
+        "ErrorDescription": "NotAllowedTenantBlockedTenantFraud - We are sorry - this resource is not available. If you are seeing this message by mistake - please contact Microsoft support."
+    },
+    {
+        "ErrorCode": "5000819",
+        "ErrorCodeName": "AADSTS5000819",
+        "ErrorDescription": "InvalidSamlTokenEmailMissingOrInvalid - SAML Assertion is invalid. Email address claim is missing or doesn't match domain from an external realm."
+    },
+    {
+        "ErrorCode": "50010",
+        "ErrorCodeName": "AADSTS50010",
+        "ErrorDescription": "AudienceUriValidationFailed - Audience URI validation for the app failed since no token audiences were configured."
+    },
+    {
+        "ErrorCode": "50011",
+        "ErrorCodeName": "AADSTS50011",
+        "ErrorDescription": "InvalidReplyTo - The reply address is missing - misconfigured - or doesn't match reply addresses configured for the app. As a resolution ensures to add this missing reply address to the Microsoft Entra application or have someone with the permissions to manage your application in Microsoft Entra IF do this for you. To learn more - see the troubleshooting article for error AADSTS50011."
+    },
+    {
+        "ErrorCode": "50012",
+        "ErrorCodeName": "AADSTS50012",
+        "ErrorDescription": "AuthenticationFailed - Authentication failed for one of the following reasons: The subject name of the signing certificate isn't authorized; A matching trusted authority policy wasn't found for the authorized subject name; The certificate chain isn't valid; The signing certificate isn't valid; Policy isn't configured on the tenant; Thumbprint of the signing certificate isn't authorized; Client assertion contains an invalid signature."
+    },
+    {
+        "ErrorCode": "50013",
+        "ErrorCodeName": "AADSTS50013",
+        "ErrorDescription": "InvalidAssertion - Assertion is invalid because of various reasons - The token issuer doesn't match the API version within its valid time range -expired -malformed - Refresh token in the assertion isn't a primary refresh token. Contact the app developer."
+    },
+    {
+        "ErrorCode": "500133",
+        "ErrorCodeName": "AADSTS500133",
+        "ErrorDescription": "Assertion isn't within its valid time range. Ensure that the access token isn't expired before using it for user assertion - or request a new token. Current time: {curTime} - expiry time of assertion {expTime}. Assertion is invalid because of various reasons: The token issuer doesn't match the API version within its valid time range; Expired; Malformed; Refresh token in the assertion isn't a primary refresh token."
+    },
+    {
+        "ErrorCode": "50014",
+        "ErrorCodeName": "AADSTS50014",
+        "ErrorDescription": "GuestUserInPendingState - The user account doesn't exist in the directory. An application likely chose the wrong tenant to sign into - and the currently logged in user was prevented from doing so since they didn't exist in your tenant. If this user should be able to sign in - add them as a guest. For further information - please visit add B2B users."
+    },
+    {
+        "ErrorCode": "50015",
+        "ErrorCodeName": "AADSTS50015",
+        "ErrorDescription": "ViralUserLegalAgeConsentRequiredState - The user requires legal age group consent."
+    },
+    {
+        "ErrorCode": "50017",
+        "ErrorCodeName": "AADSTS50017",
+        "ErrorDescription": "CertificateValidationFailed - Certification validation failed - reasons for the following reasons: Cannot find issuing certificate in trusted certificates list; Unable to find expected CrlSegment; Cannot find issuing certificate in trusted certificates list; Delta CRL distribution point is configured without a corresponding CRL distribution point; Unable to retrieve valid CRL segments because of a timeout issue; Unable to download CRL; Contact the tenant admin."
+    },
+    {
+        "ErrorCode": "500141",
+        "ErrorCodeName": "AADSTS500141",
+        "ErrorDescription": "The user's redemption is complete but the request was not initiated by the target application."
+    },
+    {
+        "ErrorCode": "5001256",
+        "ErrorCodeName": "AADSTS5001256",
+        "ErrorDescription": "Failed to complete authentication with external provider due to invalid id_token. Failure details: {details}"
+    },
+    {
+        "ErrorCode": "50020",
+        "ErrorCodeName": "AADSTS50020",
+        "ErrorDescription": "UserUnauthorized - Users are unauthorized to call this endpoint. User account '{email}' from identity provider '{idp}' does not exist in tenant '{tenant}' and cannot access the application '{appid}'({appName}) in that tenant. This account needs to be added as an external user in the tenant first. Sign out and sign in again with a different Microsoft Entra user account. If this user should be a member of the tenant - they should be invited via the B2B system. For additional information - visit AADSTS50020."
+    },
+    {
+        "ErrorCode": "500207",
+        "ErrorCodeName": "AADSTS500207",
+        "ErrorDescription": "The account type can't be used for the resource you're trying to access."
+    },
+    {
+        "ErrorCode": "500208",
+        "ErrorCodeName": "AADSTS500208",
+        "ErrorDescription": "The domain is not a valid login domain for the account type - This situation occurs when the user's account does not match the expected account type for the given tenant. For instance - if the tenant is configured to allow only work or school accounts - and the user tries to sign in with a personal Microsoft account - they will receive this error."
+    },
+    {
+        "ErrorCode": "500212",
+        "ErrorCodeName": "AADSTS500212",
+        "ErrorDescription": "NotAllowedByOutboundPolicyTenant - The user's administrator has set an outbound access policy that doesn't allow access to the resource tenant."
+    },
+    {
+        "ErrorCode": "500213",
+        "ErrorCodeName": "AADSTS500213",
+        "ErrorDescription": "NotAllowedByInboundPolicyTenant - The resource tenant's cross-tenant access policy doesn't allow this user to access this tenant."
+    },
+    {
+        "ErrorCode": "50027",
+        "ErrorCodeName": "AADSTS50027",
+        "ErrorDescription": "InvalidJwtToken - Invalid JWT token because of the following reasons: doesn't contain nonce claim - sub claim; subject identifier mismatch; duplicate claim in idToken claims; unexpected issuer; unexpected audience; not within its valid time range; token format isn't proper; External ID token from issuer failed signature verification."
+    },
+    {
+        "ErrorCode": "50029",
+        "ErrorCodeName": "AADSTS50029",
+        "ErrorDescription": "Invalid URI - domain name contains invalid characters. Contact the tenant admin."
+    },
+    {
+        "ErrorCode": "50032",
+        "ErrorCodeName": "AADSTS50032",
+        "ErrorDescription": "WeakRsaKey - Indicates the erroneous user attempt to use a weak RSA key."
+    },
+    {
+        "ErrorCode": "50033",
+        "ErrorCodeName": "AADSTS50033",
+        "ErrorDescription": "RetryableError - Indicates a transient error not related to the database operations."
+    },
+    {
+        "ErrorCode": "50034",
+        "ErrorCodeName": "AADSTS50034",
+        "ErrorDescription": "UserAccountNotFound - To sign into this application - the account must be added to the directory. This error can occur because the user mis-typed their username - or isn't in the tenant. An application might have chosen the wrong tenant to sign into - and the currently logged in user was prevented from doing so since they did not exist in your tenant. If this user should be able to log in - add them as a guest. See docs here: Add B2B users."
+    },
+    {
+        "ErrorCode": "50042",
+        "ErrorCodeName": "AADSTS50042",
+        "ErrorDescription": "UnableToGeneratePairwiseIdentifierWithMissingSalt - The salt required to generate a pairwise identifier is missing in principle. Contact the tenant admin."
+    },
+    {
+        "ErrorCode": "50043",
+        "ErrorCodeName": "AADSTS50043",
+        "ErrorDescription": "UnableToGeneratePairwiseIdentifierWithMultipleSalts"
+    },
+    {
+        "ErrorCode": "50048",
+        "ErrorCodeName": "AADSTS50048",
+        "ErrorDescription": "SubjectMismatchesIssuer - Subject mismatches Issuer claim in the client assertion. Contact the tenant admin."
+    },
+    {
+        "ErrorCode": "50049",
+        "ErrorCodeName": "AADSTS50049",
+        "ErrorDescription": "NoSuchInstanceForDiscovery - Unknown or invalid instance."
+    },
+    {
+        "ErrorCode": "50050",
+        "ErrorCodeName": "AADSTS50050",
+        "ErrorDescription": "MalformedDiscoveryRequest - The request is malformed."
+    },
+    {
+        "ErrorCode": "50053",
+        "ErrorCodeName": "AADSTS50053",
+        "ErrorDescription": "This error can result from two different reasons: IdsLocked - The account is locked because the user tried to sign in too many times with an incorrect user ID or password. The user is blocked due to repeated sign-in attempts. See Remediate risks and unblock users. Or - sign-in was blocked because it came from an IP address with malicious activity. To determine which failure reason caused this error - sign in to the Microsoft Entra admin center as at least a Cloud Application Administrator. Navigate to your Microsoft Entra tenant and then Monitoring & health > Sign-in logs. Find the failed user sign-in with Sign-in error code 50053 and check the Failure reason."
+    },
+    {
+        "ErrorCode": "50055",
+        "ErrorCodeName": "AADSTS50055",
+        "ErrorDescription": "InvalidPasswordExpiredPassword - The password is expired. The user's password is expired - and therefore their login or session was ended. They will be offered the opportunity to reset it - or can ask an admin to reset it via Reset a user's password using Microsoft Entra ID."
+    },
+    {
+        "ErrorCode": "50056",
+        "ErrorCodeName": "AADSTS50056",
+        "ErrorDescription": "Invalid or null password: password doesn't exist in the directory for this user. The user should be asked to enter their password again."
+    },
+    {
+        "ErrorCode": "50057",
+        "ErrorCodeName": "AADSTS50057",
+        "ErrorDescription": "UserDisabled - The user account is disabled. The user object in Active Directory backing this account has been disabled. An admin can re-enable this account through PowerShell"
+    },
+    {
+        "ErrorCode": "50058",
+        "ErrorCodeName": "AADSTS50058",
+        "ErrorDescription": "UserInformationNotProvided - Session information isn't sufficient for single-sign-on. This means that a user isn't signed in. This is a common error that's expected when a user is unauthenticated and hasn't yet signed in. If this error is encountered in an SSO context where the user has previously signed in - this means that the SSO session was either not found or invalid. This error might be returned to the application if prompt=none is specified."
+    },
+    {
+        "ErrorCode": "50059",
+        "ErrorCodeName": "AADSTS50059",
+        "ErrorDescription": "MissingTenantRealmAndNoUserInformationProvided - Tenant-identifying information wasn't found in either the request or implied by any provided credentials. The user can contact the tenant admin to help resolve the issue."
+    },
+    {
+        "ErrorCode": "50061",
+        "ErrorCodeName": "AADSTS50061",
+        "ErrorDescription": "SignoutInvalidRequest - Unable to complete sign out. The request was invalid."
+    },
+    {
+        "ErrorCode": "50064",
+        "ErrorCodeName": "AADSTS50064",
+        "ErrorDescription": "CredentialAuthenticationError - Credential validation on username or password has failed."
+    },
+    {
+        "ErrorCode": "50068",
+        "ErrorCodeName": "AADSTS50068",
+        "ErrorDescription": "SignoutInitiatorNotParticipant - Sign out has failed. The app that initiated sign out isn't a participant in the current session."
+    },
+    {
+        "ErrorCode": "50070",
+        "ErrorCodeName": "AADSTS50070",
+        "ErrorDescription": "SignoutUnknownSessionIdentifier - Sign out has failed. The sign out request specified a name identifier that didn't match the existing session(s)."
+    },
+    {
+        "ErrorCode": "50071",
+        "ErrorCodeName": "AADSTS50071",
+        "ErrorDescription": "SignoutMessageExpired - The logout request has expired."
+    },
+    {
+        "ErrorCode": "50072",
+        "ErrorCodeName": "AADSTS50072",
+        "ErrorDescription": "UserStrongAuthEnrollmentRequiredInterrupt - User needs to enroll for second factor authentication (interactive)."
+    },
+    {
+        "ErrorCode": "50074",
+        "ErrorCodeName": "AADSTS50074",
+        "ErrorDescription": "UserStrongAuthClientAuthNRequiredInterrupt - Strong authentication is required and the user did not pass the MFA challenge."
+    },
+    {
+        "ErrorCode": "50076",
+        "ErrorCodeName": "AADSTS50076",
+        "ErrorDescription": "UserStrongAuthClientAuthNRequired - Due to a configuration change made by the admin such as a Conditional Access policy - per-user enforcement - or because you moved to a new location - the user must use multifactor authentication to access the resource. Retry with a new authorize request for the resource."
+    },
+    {
+        "ErrorCode": "50078",
+        "ErrorCodeName": "AADSTS50078",
+        "ErrorDescription": "UserStrongAuthExpired- Presented multifactor authentication has expired due to policies configured by your administrator. You must refresh your multifactor authentication to access '{resource}'."
+    },
+    {
+        "ErrorCode": "50079",
+        "ErrorCodeName": "AADSTS50079",
+        "ErrorDescription": "UserStrongAuthEnrollmentRequired - Due to a configuration change made by the admin such as a Conditional Access policy - per-user enforcement - or because the user moved to a new location - the user is required to use multifactor authentication. Either a managed user needs to register security info to complete multifactor authentication - or a federated user needs to get the multifactor claim from the federated identity provider."
+    },
+    {
+        "ErrorCode": "50085",
+        "ErrorCodeName": "AADSTS50085",
+        "ErrorDescription": "Refresh token needs social IDP login. Have user try signing-in again with username -password"
+    },
+    {
+        "ErrorCode": "50086",
+        "ErrorCodeName": "AADSTS50086",
+        "ErrorDescription": "SasNonRetryableError"
+    },
+    {
+        "ErrorCode": "50087",
+        "ErrorCodeName": "AADSTS50087",
+        "ErrorDescription": "SasRetryableError - A transient error has occurred during strong authentication. Please try again."
+    },
+    {
+        "ErrorCode": "50088",
+        "ErrorCodeName": "AADSTS50088",
+        "ErrorDescription": "Limit on telecom MFA calls reached. Please try again in a few minutes."
+    },
+    {
+        "ErrorCode": "50089",
+        "ErrorCodeName": "AADSTS50089",
+        "ErrorDescription": "Authentication failed due to flow token expired. Expected - auth codes - refresh tokens - and sessions expire over time or are revoked by the user or an admin. The app will request a new login from the user."
+    },
+    {
+        "ErrorCode": "50097",
+        "ErrorCodeName": "AADSTS50097",
+        "ErrorDescription": "DeviceAuthenticationRequired - Device authentication is required."
+    },
+    {
+        "ErrorCode": "50098",
+        "ErrorCodeName": "AADSTS50098",
+        "ErrorDescription": "JWT body must contain '{field}'."
+    },
+    {
+        "ErrorCode": "50099",
+        "ErrorCodeName": "AADSTS50099",
+        "ErrorDescription": "PKeyAuthInvalidJwtUnauthorized - The JWT signature is invalid."
+    },
+    {
+        "ErrorCode": "50100",
+        "ErrorCodeName": "AADSTS50100",
+        "ErrorDescription": "There was an error transforming the claims for the token."
+    },
+    {
+        "ErrorCode": "50101",
+        "ErrorCodeName": "AADSTS50101",
+        "ErrorDescription": "Unknown claims transformer '{name}' was specified for principal '{principalId}'."
+    },
+    {
+        "ErrorCode": "50102",
+        "ErrorCodeName": "AADSTS50102",
+        "ErrorDescription": "Unable to load CustomClaimsTransformer '{type}' was specified for principal '{principalId}'."
+    },
+    {
+        "ErrorCode": "50103",
+        "ErrorCodeName": "AADSTS50103",
+        "ErrorDescription": "There was an error transforming the claims for the token: {errorMessage}"
+    },
+    {
+        "ErrorCode": "50105",
+        "ErrorCodeName": "AADSTS50105",
+        "ErrorDescription": "EntitlementGrantsNotFound - The signed in user isn't assigned to a role for the signed in app. Assign the user to the app. To learn more - see the troubleshooting article for error AADSTS50105."
+    },
+    {
+        "ErrorCode": "50107",
+        "ErrorCodeName": "AADSTS50107",
+        "ErrorDescription": "The requested federation realm object '{name}' doesn't exist. Application error - the login request was malformed and couldn't be matched with an existing authentication endpoint or instance."
+    },
+    {
+        "ErrorCode": "50108",
+        "ErrorCodeName": "AADSTS50108",
+        "ErrorDescription": "Claims transformation configuration could not be retrieved."
+    },
+    {
+        "ErrorCode": "50109",
+        "ErrorCodeName": "AADSTS50109",
+        "ErrorDescription": "Claim transformation is unknown from configuration."
+    },
+    {
+        "ErrorCode": "50111",
+        "ErrorCodeName": "AADSTS50111",
+        "ErrorDescription": "Unknown claim transformation was asked to be applied."
+    },
+    {
+        "ErrorCode": "50117",
+        "ErrorCodeName": "AADSTS50117",
+        "ErrorDescription": "Failed to deserialize policy specified in the request's claim parameter."
+    },
+    {
+        "ErrorCode": "50120",
+        "ErrorCodeName": "AADSTS50120",
+        "ErrorDescription": "Unknown credential type - issue with the JWT header. Contact the tenant admin."
+    },
+    {
+        "ErrorCode": "50123",
+        "ErrorCodeName": "AADSTS50123",
+        "ErrorDescription": "Unknown claims transformation method '{method}' was specified for principal '{principalId}'."
+    },
+    {
+        "ErrorCode": "50124",
+        "ErrorCodeName": "AADSTS50124",
+        "ErrorDescription": "Invalid regular expression configured for claims transformation for this application. Contact your tenant admin to fix the claims mapping configuration. See Customize SAML token claims"
+    },
+    {
+        "ErrorCode": "501241",
+        "ErrorCodeName": "AADSTS501241",
+        "ErrorDescription": "Mandatory Input '{paramName}' missing from transformation ID '{transformId}'. This error is returned while Microsoft Entra ID is trying to build a SAML response to the application. NameID claim or NameIdentifier is mandatory in SAML response and if Microsoft Entra ID failed to get source attribute for NameID claim - it returns this error. As a resolution - ensure that you add claim rules. To add claim rules - sign in to the Microsoft Entra admin center as at least a Cloud Application Administrator - and then browse to Entra ID > Enterprise apps. Select your application - select Single Sign-On and then in User Attributes & Claims enter the Unique User Identifier (Name ID)."
+    },
+    {
+        "ErrorCode": "50125",
+        "ErrorCodeName": "AADSTS50125",
+        "ErrorDescription": "PasswordResetRegistrationRequiredInterrupt - Sign-in was interrupted because of a password reset or password registration entry."
+    },
+    {
+        "ErrorCode": "50126",
+        "ErrorCodeName": "AADSTS50126",
+        "ErrorDescription": "InvalidUserNameOrPassword - Error validating credentials due to invalid username or password. The user didn't enter the right credentials. Expect to see some number of these errors in your logs due to users making mistakes."
+    },
+    {
+        "ErrorCode": "50127",
+        "ErrorCodeName": "AADSTS50127",
+        "ErrorDescription": "BrokerAppNotInstalled - User needs to install a broker app to gain access to this content."
+    },
+    {
+        "ErrorCode": "50128",
+        "ErrorCodeName": "AADSTS50128",
+        "ErrorDescription": "Invalid domain name - No tenant-identifying information found in either the request or implied by any provided credentials."
+    },
+    {
+        "ErrorCode": "50129",
+        "ErrorCodeName": "AADSTS50129",
+        "ErrorDescription": "DeviceIsNotWorkplaceJoined - Workplace join is required to register the device."
+    },
+    {
+        "ErrorCode": "50130",
+        "ErrorCodeName": "AADSTS50130",
+        "ErrorDescription": "The claim value(s) '{value}' cannot be interpreted as known auth method(s)."
+    },
+    {
+        "ErrorCode": "50131",
+        "ErrorCodeName": "AADSTS50131",
+        "ErrorDescription": "ConditionalAccessFailed - Indicates various Conditional Access errors such as bad Windows device state - request blocked due to suspicious activity - access policy - or security policy decisions."
+    },
+    {
+        "ErrorCode": "50132",
+        "ErrorCodeName": "AADSTS50132",
+        "ErrorDescription": "SsoArtifactInvalidOrExpired - The session isn't valid due to password expiration or recent password change."
+    },
+    {
+        "ErrorCode": "50133",
+        "ErrorCodeName": "AADSTS50133",
+        "ErrorDescription": "SsoArtifactRevoked - The session isn't valid due to password expiration or recent password change."
+    },
+    {
+        "ErrorCode": "50134",
+        "ErrorCodeName": "AADSTS50134",
+        "ErrorDescription": "DeviceFlowAuthorizeWrongDatacenter - Wrong data center. To authorize a request that was initiated by an app in the OAuth 2.0 device flow - the authorizing party must be in the same data center where the original request resides."
+    },
+    {
+        "ErrorCode": "50135",
+        "ErrorCodeName": "AADSTS50135",
+        "ErrorDescription": "PasswordChangeCompromisedPassword - Password change is required due to account risk."
+    },
+    {
+        "ErrorCode": "50136",
+        "ErrorCodeName": "AADSTS50136",
+        "ErrorDescription": "RedirectMsaSessionToApp - Single MSA session detected."
+    },
+    {
+        "ErrorCode": "50137",
+        "ErrorCodeName": "AADSTS50137",
+        "ErrorDescription": "Password needs to be changed due to security policy rule."
+    },
+    {
+        "ErrorCode": "50138",
+        "ErrorCodeName": "AADSTS50138",
+        "ErrorDescription": "Invalid encryption key environment."
+    },
+    {
+        "ErrorCode": "50139",
+        "ErrorCodeName": "AADSTS50139",
+        "ErrorDescription": "SessionMissingMsaOAuth2RefreshToken - The session is invalid due to a missing external refresh token."
+    },
+    {
+        "ErrorCode": "50140",
+        "ErrorCodeName": "AADSTS50140",
+        "ErrorDescription": "KmsiInterrupt - This error occurred due to Keep me signed in interrupt when the user was signing-in. This is an expected part of the sign in flow - where a user is asked if they want to remain signed into their current browser to make further logins easier. For more information - see The new Microsoft Entra sign-in and âKeep me signed inâ experiences rolling out now!. You can open a support ticket with Correlation ID - Request ID - and Error code to get more details."
+    },
+    {
+        "ErrorCode": "50141",
+        "ErrorCodeName": "AADSTS50141",
+        "ErrorDescription": "Protected key isn't intended for the authenticated user."
+    },
+    {
+        "ErrorCode": "50142",
+        "ErrorCodeName": "AADSTS50142",
+        "ErrorDescription": "Password change is required due to a Conditional Access policy."
+    },
+    {
+        "ErrorCode": "50143",
+        "ErrorCodeName": "AADSTS50143",
+        "ErrorDescription": "Session mismatch - Session is invalid because user tenant doesn't match the domain hint due to different resource. Open a support ticket with Correlation ID - Request ID - and Error code to get more details."
+    },
+    {
+        "ErrorCode": "50144",
+        "ErrorCodeName": "AADSTS50144",
+        "ErrorDescription": "InvalidPasswordExpiredOnPremPassword - User's Active Directory password has expired. Generate a new password for the user or have the user use the self-service reset tool to reset their password."
+    },
+    {
+        "ErrorCode": "50147",
+        "ErrorCodeName": "AADSTS50147",
+        "ErrorDescription": "Invalid size of the code challenge parameter. Contact the application owner to correct their use of the PKCE parameters."
+    },
+    {
+        "ErrorCode": "50148",
+        "ErrorCodeName": "AADSTS50148",
+        "ErrorDescription": "The code_verifier doesn't match the code_challenge supplied in the authorization request for PKCE. Contact the application owner to correct their use of the PKCE parameters."
+    },
+    {
+        "ErrorCode": "50146",
+        "ErrorCodeName": "AADSTS50146",
+        "ErrorDescription": "MissingCustomSigningKey - This app is required to be configured with an app-specific signing key. It's either not configured with one - or the key has expired or isn't yet valid. Please contact the owner of the application."
+    },
+    {
+        "ErrorCode": "501461",
+        "ErrorCodeName": "AADSTS501461",
+        "ErrorDescription": "AcceptMappedClaims is only supported for a token audience matching the application GUID or an audience within the tenant's verified domains. Either change the resource identifier - or use an application-specific signing key."
+    },
+    {
+        "ErrorCode": "50147",
+        "ErrorCodeName": "AADSTS50147",
+        "ErrorDescription": "MissingCodeChallenge - The size of the code challenge parameter isn't valid."
+    },
+    {
+        "ErrorCode": "501481",
+        "ErrorCodeName": "AADSTS501481",
+        "ErrorDescription": "The Code_Verifier doesn't match the code_challenge supplied in the authorization request."
+    },
+    {
+        "ErrorCode": "50149",
+        "ErrorCodeName": "AADSTS50149",
+        "ErrorDescription": "Invalid Code_Challenge_method parameter."
+    },
+    {
+        "ErrorCode": "501491",
+        "ErrorCodeName": "AADSTS501491",
+        "ErrorDescription": "InvalidCodeChallengeMethodInvalidSize - Invalid size of Code_Challenge parameter."
+    },
+    {
+        "ErrorCode": "50150",
+        "ErrorCodeName": "AADSTS50150",
+        "ErrorDescription": "The provided credentials does not have a valid user consent approval information."
+    },
+    {
+        "ErrorCode": "50155",
+        "ErrorCodeName": "AADSTS50155",
+        "ErrorDescription": "DeviceAuthenticationFailed - Device authentication failed for this user."
+    },
+    {
+        "ErrorCode": "50156",
+        "ErrorCodeName": "AADSTS50156",
+        "ErrorDescription": "Device tokens are not supported for V2 resource."
+    },
+    {
+        "ErrorCode": "50157",
+        "ErrorCodeName": "AADSTS50157",
+        "ErrorDescription": "User redirection required for routing."
+    },
+    {
+        "ErrorCode": "50158",
+        "ErrorCodeName": "AADSTS50158",
+        "ErrorDescription": "External security challenge not satisfied. User will be redirected to another page or authentication provider to satisfy additional authentication challenges. The user is required to satisfy additional requirements before finishing authentication - and was redirected to another page (such as terms of use or a third party MFA provider). This code alone doesn't indicate a failure on your users' part to sign in. The sign in logs may indicate that this challenge was successfully passed or failed."
+    },
+    {
+        "ErrorCode": "50159",
+        "ErrorCodeName": "AADSTS50159",
+        "ErrorDescription": "Claims sent by external provider are not enough."
+    },
+    {
+        "ErrorCode": "50160",
+        "ErrorCodeName": "AADSTS50160",
+        "ErrorDescription": "Different target tenant is preferred."
+    },
+    {
+        "ErrorCode": "50161",
+        "ErrorCodeName": "AADSTS50161",
+        "ErrorDescription": "Failed to validate authorization url of external claims provider."
+    },
+    {
+        "ErrorCode": "50162",
+        "ErrorCodeName": "AADSTS50162",
+        "ErrorDescription": "Claims transformation has timed out. This indicates too many or too complex transformations may have been configured for this application. A retry of the request may succeed. Otherwise - please contact your admin to fix the configuration."
+    },
+    {
+        "ErrorCode": "50163",
+        "ErrorCodeName": "AADSTS50163",
+        "ErrorDescription": "Regular expression replacement for claims transformation has resulted in a claim which exceeds the size limit. Please contact your admin to fix the configuration."
+    },
+    {
+        "ErrorCode": "50164",
+        "ErrorCodeName": "AADSTS50164",
+        "ErrorDescription": "The supplied access token was not issued for the purpose for which it is being used. Expected a token with purpose '{name}'."
+    },
+    {
+        "ErrorCode": "50165",
+        "ErrorCodeName": "AADSTS50165",
+        "ErrorDescription": "The token encrypting algorithm '{algorithm}' requested by the application isn't supported for this type of token. This indicates the application is misconfigured."
+    },
+    {
+        "ErrorCode": "50166",
+        "ErrorCodeName": "AADSTS50166",
+        "ErrorDescription": "Request to External OIDC endpoint failed."
+    },
+    {
+        "ErrorCode": "50167",
+        "ErrorCodeName": "AADSTS50167",
+        "ErrorDescription": "Invalid pop_jwk key."
+    },
+    {
+        "ErrorCode": "50168",
+        "ErrorCodeName": "AADSTS50168",
+        "ErrorDescription": "The client is capable of utilizing the Windows 10 Accounts extension to perform SSO but no SSO token was found in the request or the token was expired. Request has been interrupted to attempt to pull an SSO token."
+    },
+    {
+        "ErrorCode": "50169",
+        "ErrorCodeName": "AADSTS50169",
+        "ErrorDescription": "InvalidRequestBadRealm - The realm isn't a configured realm of the current service namespace."
+    },
+    {
+        "ErrorCode": "50170",
+        "ErrorCodeName": "AADSTS50170",
+        "ErrorDescription": "MissingExternalClaimsProviderMapping - The external controls mapping is missing."
+    },
+    {
+        "ErrorCode": "50171",
+        "ErrorCodeName": "AADSTS50171",
+        "ErrorDescription": "The given audience can only be used in Mutual-TLS token calls."
+    },
+    {
+        "ErrorCode": "50172",
+        "ErrorCodeName": "AADSTS50172",
+        "ErrorDescription": "External claims provider {provider} isn't approved."
+    },
+    {
+        "ErrorCode": "50173",
+        "ErrorCodeName": "AADSTS50173",
+        "ErrorDescription": "The provided grant has expired due to it being revoked - a fresh auth token is needed. The user might have changed or reset their password. The grant was issued on '{authTime}' and the TokensValidFrom date (before which tokens are not valid) for this user is '{validDate}'. To learn more - see the troubleshooting article for error AADSTS50173."
+    },
+    {
+        "ErrorCode": "50176",
+        "ErrorCodeName": "AADSTS50176",
+        "ErrorDescription": "Missing definition of external control: {controlId}."
+    },
+    {
+        "ErrorCode": "50177",
+        "ErrorCodeName": "AADSTS50177",
+        "ErrorDescription": "ExternalChallengeNotSupportedForPassthroughUsers - External challenge isn't supported for passthrough users."
+    },
+    {
+        "ErrorCode": "50178",
+        "ErrorCodeName": "AADSTS50178",
+        "ErrorDescription": "SessionControlNotSupportedForPassthroughUsers - Session control isn't supported for passthrough users."
+    },
+    {
+        "ErrorCode": "50180",
+        "ErrorCodeName": "AADSTS50180",
+        "ErrorDescription": "WindowsIntegratedAuthMissing - Integrated Windows authentication is needed. Enable the tenant for Seamless SSO."
+    },
+    {
+        "ErrorCode": "50187",
+        "ErrorCodeName": "AADSTS50187",
+        "ErrorDescription": "DeviceInformationNotProvided - The service failed to perform device authentication."
+    },
+    {
+        "ErrorCode": "50192",
+        "ErrorCodeName": "AADSTS50192",
+        "ErrorDescription": "Invalid Request - RawCredentialExpectedNotFound - No Credential was included in the sign-in request. Example: user is performing certificate-based authentication (CBA) and no certificate is sent (or Proxy removes) the user's certificate in the sign-in request."
+    },
+    {
+        "ErrorCode": "50194",
+        "ErrorCodeName": "AADSTS50194",
+        "ErrorDescription": "Application '{appId}'({appName}) isn't configured as a multitenant application. Usage of the /common endpoint isn't supported for such applications created after '{time}'. Use a tenant-specific endpoint or configure the application to be multitenant."
+    },
+    {
+        "ErrorCode": "50196",
+        "ErrorCodeName": "AADSTS50196",
+        "ErrorDescription": "LoopDetected - A client loop has been detected. Check the app's logic to ensure that token caching is implemented - and that error conditions are handled correctly. The app has made too many of the same request in too short a period - indicating that it is in a faulty state or is abusively requesting tokens."
+    },
+    {
+        "ErrorCode": "50197",
+        "ErrorCodeName": "AADSTS50197",
+        "ErrorDescription": "ConflictingIdentities - The user could not be found. Try signing in again."
+    },
+    {
+        "ErrorCode": "50199",
+        "ErrorCodeName": "AADSTS50199",
+        "ErrorDescription": "CmsiInterrupt - For security reasons - user confirmation is required for this request. Interrupt is shown for all scheme redirects in mobile browsers. No action required. The user was asked to confirm that this app is the application they intended to sign into. This is a security feature that helps prevent spoofing attacks. This occurs because a system webview has been used to request a token for a native application. To avoid this prompt - the redirect URI should be part of the following safe list: http:// or https:// or chrome-extension:// (desktop Chrome browser only)"
+    },
+    {
+        "ErrorCode": "51000",
+        "ErrorCodeName": "AADSTS51000",
+        "ErrorDescription": "RequiredFeatureNotEnabled - The feature is disabled."
+    },
+    {
+        "ErrorCode": "51001",
+        "ErrorCodeName": "AADSTS51001",
+        "ErrorDescription": "DomainHintMustbePresent - Domain hint must be present with on-premises security identifier or on-premises UPN."
+    },
+    {
+        "ErrorCode": "1000104",
+        "ErrorCodeName": "AADSTS1000104",
+        "ErrorDescription": "XCB2BResourceCloudNotAllowedOnIdentityTenant - Resource cloud {resourceCloud} isn't allowed on identity tenant {identityTenant}. {resourceCloud} - cloud instance which owns the resource. {identityTenant} - is the tenant where signing-in identity is originated from."
+    },
+    {
+        "ErrorCode": "51004",
+        "ErrorCodeName": "AADSTS51004",
+        "ErrorDescription": "UserAccountNotInDirectory - The user account doesn't exist in the directory. An application likely chose the wrong tenant to sign into - and the currently logged in user was prevented from doing so since they did not exist in your tenant. If this user should be able to log in - add them as a guest. For further information - please visit add B2B users."
+    },
+    {
+        "ErrorCode": "51005",
+        "ErrorCodeName": "AADSTS51005",
+        "ErrorDescription": "TemporaryRedirect - Equivalent to HTTP status 307 - which indicates that the requested information is located at the URI specified in the location header. When you receive this status - follow the location header associated with the response. When the original request method was POST - the redirected request will also use the POST method."
+    },
+    {
+        "ErrorCode": "51006",
+        "ErrorCodeName": "AADSTS51006",
+        "ErrorDescription": "ForceReauthDueToInsufficientAuth - Integrated Windows authentication is needed. User logged in using a session token that is missing the integrated Windows authentication claim. Request the user to log in again."
+    },
+    {
+        "ErrorCode": "52004",
+        "ErrorCodeName": "AADSTS52004",
+        "ErrorDescription": "DelegationDoesNotExistForLinkedIn - The user has not provided consent for access to LinkedIn resources."
+    },
+    {
+        "ErrorCode": "53000",
+        "ErrorCodeName": "AADSTS53000",
+        "ErrorDescription": "DeviceNotCompliant - Conditional Access policy requires a compliant device - and the device isn't compliant. The user must enroll their device with an approved MDM provider like Intune. For additional information - please visit Conditional Access device remediation."
+    },
+    {
+        "ErrorCode": "53001",
+        "ErrorCodeName": "AADSTS53001",
+        "ErrorDescription": "DeviceNotDomainJoined - Conditional Access policy requires a domain joined device - and the device isn't domain joined. Have the user use a domain joined device."
+    },
+    {
+        "ErrorCode": "53002",
+        "ErrorCodeName": "AADSTS53002",
+        "ErrorDescription": "ApplicationUsedIsNotAnApprovedApp - The app used isn't an approved app for Conditional Access. User needs to use one of the apps from the list of approved apps to use in order to get access."
+    },
+    {
+        "ErrorCode": "53003",
+        "ErrorCodeName": "AADSTS53003",
+        "ErrorDescription": "BlockedByConditionalAccess - Access has been blocked by Conditional Access policies. The access policy does not allow token issuance. If this is unexpected - see the Conditional Access policy that applied to this request or contact your administrator. For additional information - please visit troubleshooting sign-in with Conditional Access."
+    },
+    {
+        "ErrorCode": "530035",
+        "ErrorCodeName": "AADSTS530035",
+        "ErrorDescription": "BlockedBySecurityDefaults - Access has been blocked by security defaults. This is due to the request using legacy auth or being deemed unsafe by security defaults policies. For additional information - please visit enforced security policies."
+    },
+    {
+        "ErrorCode": "53004",
+        "ErrorCodeName": "AADSTS53004",
+        "ErrorDescription": "ProofUpBlockedDueToRisk - User needs to complete the multifactor authentication registration process before accessing this content. User should register for multifactor authentication."
+    },
+    {
+        "ErrorCode": "53010",
+        "ErrorCodeName": "AADSTS53010",
+        "ErrorDescription": "ProofUpBlockedDueToSecurityInfoAcr - Cannot configure multifactor authentication methods because the organization requires this information to be set from specific locations or devices."
+    },
+    {
+        "ErrorCode": "53011",
+        "ErrorCodeName": "AADSTS53011",
+        "ErrorDescription": "User blocked due to risk on home tenant."
+    },
+    {
+        "ErrorCode": "530034",
+        "ErrorCodeName": "AADSTS530034",
+        "ErrorDescription": "DelegatedAdminBlockedDueToSuspiciousActivity - A delegated administrator was blocked from accessing the tenant due to account risk in their home tenant."
+    },
+    {
+        "ErrorCode": "54000",
+        "ErrorCodeName": "AADSTS54000",
+        "ErrorDescription": "MinorUserBlockedLegalAgeGroupRule"
+    },
+    {
+        "ErrorCode": "54005",
+        "ErrorCodeName": "AADSTS54005",
+        "ErrorDescription": "OAuth2 Authorization code was already redeemed - please retry with a new valid code or use an existing refresh token."
+    },
+    {
+        "ErrorCode": "65001",
+        "ErrorCodeName": "AADSTS65001",
+        "ErrorDescription": "DelegationDoesNotExist - The user or administrator hasn't consented to use the application with ID X. Send an interactive authorization request for this user and resource."
+    },
+    {
+        "ErrorCode": "65002",
+        "ErrorCodeName": "AADSTS65002",
+        "ErrorDescription": "Consent between first party application '{applicationId}' and first party resource '{resourceId}' must be configured via preauthorization - applications owned and operated by Microsoft must get approval from the API owner before requesting tokens for that API. A developer in your tenant might be attempting to reuse an App ID owned by Microsoft. This error prevents them from impersonating a Microsoft application to call other APIs. They must move to another app ID they register."
+    },
+    {
+        "ErrorCode": "65004",
+        "ErrorCodeName": "AADSTS65004",
+        "ErrorDescription": "UserDeclinedConsent - User declined to consent to access the app. Have the user retry the sign-in and consent to the app"
+    },
+    {
+        "ErrorCode": "65005",
+        "ErrorCodeName": "AADSTS65005",
+        "ErrorDescription": "MisconfiguredApplication - The app required resource access list doesn't contain apps discoverable by the resource - or the client app has requested access to resource - which wasn't specified in its required resource access list or Graph service returned bad request or resource not found. If the app supports SAML - you might have configured the app with the wrong Identifier (Entity). To learn more - see the troubleshooting article for error AADSTS650056."
+    },
+    {
+        "ErrorCode": "650052",
+        "ErrorCodeName": "AADSTS650052",
+        "ErrorDescription": "The app needs access to a service (\\{name}\\) that your organization \\{organization}\\ hasn't subscribed to or enabled. Contact your IT Admin to review the configuration of your service subscriptions."
+    },
+    {
+        "ErrorCode": "650054",
+        "ErrorCodeName": "AADSTS650054",
+        "ErrorDescription": "The application asked for permissions to access a resource that has been removed or is no longer available. Make sure that all resources the app is calling are present in the tenant you're operating in."
+    },
+    {
+        "ErrorCode": "650056",
+        "ErrorCodeName": "AADSTS650056",
+        "ErrorDescription": "Misconfigured application. This could be due to one of the following: the client has not listed any permissions for '{name}' in the requested permissions in the client's application registration. Or - the admin has not consented in the tenant. Or - check the application identifier in the request to ensure it matches the configured client application identifier. Or - check the certificate in the request to ensure it's valid. Please contact your admin to fix the configuration or consent on behalf of the tenant. Client app ID: {ID}. Please contact your admin to fix the configuration or consent on behalf of the tenant."
+    },
+    {
+        "ErrorCode": "650057",
+        "ErrorCodeName": "AADSTS650057",
+        "ErrorDescription": "Invalid resource. The client has requested access to a resource which isn't listed in the requested permissions in the client's application registration. Client app ID: {appId}({appName}). Resource value from request: {resource}. Resource app ID: {resourceAppId}. List of valid resources from app registration: {regList}."
+    },
+    {
+        "ErrorCode": "67003",
+        "ErrorCodeName": "AADSTS67003",
+        "ErrorDescription": "ActorNotValidServiceIdentity"
+    },
+    {
+        "ErrorCode": "70000",
+        "ErrorCodeName": "AADSTS70000",
+        "ErrorDescription": "InvalidGrant - Authentication failed. The refresh token isn't valid. Error might be due to the following reasons: Token binding header is empty; Token binding hash does not match"
+    },
+    {
+        "ErrorCode": "70001",
+        "ErrorCodeName": "AADSTS70001",
+        "ErrorDescription": "UnauthorizedClient - The application is disabled. To learn more - see the troubleshooting article for error AADSTS70001."
+    },
+    {
+        "ErrorCode": "700011",
+        "ErrorCodeName": "AADSTS700011",
+        "ErrorDescription": "UnauthorizedClientAppNotFoundInOrgIdTenant - Application with identifier {appIdentifier} was not found in the directory. A client application requested a token from your tenant - but the client app doesn't exist in your tenant - so the call failed."
+    },
+    {
+        "ErrorCode": "70002",
+        "ErrorCodeName": "AADSTS70002",
+        "ErrorDescription": "InvalidClient - Error validating the credentials. The specified client_secret does not match the expected value for this client. Correct the client_secret and try again. For more info - see Use the authorization code to request an access token."
+    },
+    {
+        "ErrorCode": "700025",
+        "ErrorCodeName": "AADSTS700025",
+        "ErrorDescription": "InvalidClientPublicClientWithCredential - Client is public so neither 'client_assertion' nor 'client_secret' should be presented."
+    },
+    {
+        "ErrorCode": "700027",
+        "ErrorCodeName": "AADSTS700027",
+        "ErrorDescription": "Client assertion failed signature validation. Developer error - the app is attempting to sign in without the necessary or correct authentication parameters."
+    },
+    {
+        "ErrorCode": "70003",
+        "ErrorCodeName": "AADSTS70003",
+        "ErrorDescription": "UnsupportedGrantType - The app returned an unsupported grant type."
+    },
+    {
+        "ErrorCode": "700030",
+        "ErrorCodeName": "AADSTS700030",
+        "ErrorDescription": "Invalid certificate - subject name in certificate isn't authorized. SubjectNames/SubjectAlternativeNames (up to 10) in token certificate are: {certificateSubjects}."
+    },
+    {
+        "ErrorCode": "70004",
+        "ErrorCodeName": "AADSTS70004",
+        "ErrorDescription": "InvalidRedirectUri - The app returned an invalid redirect URI. The redirect address specified by the client does not match any configured addresses or any addresses on the OIDC approve list."
+    },
+    {
+        "ErrorCode": "70005",
+        "ErrorCodeName": "AADSTS70005",
+        "ErrorDescription": "UnsupportedResponseType - The app returned an unsupported response type due to the following reasons: response type 'token' isn't enabled for the app; response type 'id_token' requires the 'OpenID' scope -contains an unsupported OAuth parameter value in the encoded wctx"
+    },
+    {
+        "ErrorCode": "700054",
+        "ErrorCodeName": "AADSTS700054",
+        "ErrorDescription": "Response_type 'id_token' isn't enabled for the application. The application requested an ID token from the authorization endpoint - but did not have ID token implicit grant enabled. Sign in to the Microsoft Entra admin center as at least a Cloud Application Administrator and then browse to Entra ID > App registrations. Select your application and then select Authentication. Under Implicit grant and hybrid flows - make sure ID tokens' is selected."
+    },
+    {
+        "ErrorCode": "70007",
+        "ErrorCodeName": "AADSTS70007",
+        "ErrorDescription": "UnsupportedResponseMode - The app returned an unsupported value of response_mode when requesting a token."
+    },
+    {
+        "ErrorCode": "70008",
+        "ErrorCodeName": "AADSTS70008",
+        "ErrorDescription": "ExpiredOrRevokedGrant - The refresh token has expired due to inactivity. The token was issued on XXX and was inactive for a certain amount of time."
+    },
+    {
+        "ErrorCode": "700082",
+        "ErrorCodeName": "AADSTS700082",
+        "ErrorDescription": "ExpiredOrRevokedGrantInactiveToken - The refresh token has expired due to inactivity. The token was issued on {issueDate} and was inactive for {time}. Expected part of the token lifecycle - the user went an extended period of time without using the application - so the token was expired when the app attempted to refresh it."
+    },
+    {
+        "ErrorCode": "700084",
+        "ErrorCodeName": "AADSTS700084",
+        "ErrorDescription": "The refresh token was issued to a single page app (SPA) - and therefore has a fixed - limited lifetime of {time} - which can't be extended. It is now expired and a new sign in request must be sent by the SPA to the sign in page. The token was issued on {issueDate}."
+    },
+    {
+        "ErrorCode": "70011",
+        "ErrorCodeName": "AADSTS70011",
+        "ErrorDescription": "InvalidScope - The scope requested by the app is invalid."
+    },
+    {
+        "ErrorCode": "70012",
+        "ErrorCodeName": "AADSTS70012",
+        "ErrorDescription": "MsaServerError - A server error occurred while authenticating an MSA (consumer) user. Try again. If it continues to fail - open a support ticket "
+    },
+    {
+        "ErrorCode": "70016",
+        "ErrorCodeName": "AADSTS70016",
+        "ErrorDescription": "AuthorizationPending - OAuth 2.0 device flow error. Authorization is pending. The device will retry polling the request."
+    },
+    {
+        "ErrorCode": "70018",
+        "ErrorCodeName": "AADSTS70018",
+        "ErrorDescription": "BadVerificationCode - Invalid verification code due to User typing in wrong user code for device code flow. Authorization isn't approved."
+    },
+    {
+        "ErrorCode": "70019",
+        "ErrorCodeName": "AADSTS70019",
+        "ErrorDescription": "CodeExpired - Verification code expired. Have the user retry the sign-in."
+    },
+    {
+        "ErrorCode": "70043",
+        "ErrorCodeName": "AADSTS70043",
+        "ErrorDescription": "BadTokenDueToSignInFrequency - The refresh token has expired or is invalid due to sign-in frequency checks by Conditional Access. The token was issued on {issueDate} and the maximum allowed lifetime for this request is {time}."
+    },
+    {
+        "ErrorCode": "75001",
+        "ErrorCodeName": "AADSTS75001",
+        "ErrorDescription": "BindingSerializationError - An error occurred during SAML message binding."
+    },
+    {
+        "ErrorCode": "75003",
+        "ErrorCodeName": "AADSTS75003",
+        "ErrorDescription": "UnsupportedBindingError - The app returned an error related to unsupported binding (SAML protocol response can't be sent via bindings other than HTTP POST)."
+    },
+    {
+        "ErrorCode": "75005",
+        "ErrorCodeName": "AADSTS75005",
+        "ErrorDescription": "Saml2MessageInvalid - Microsoft Entra doesn't support the SAML request sent by the app for SSO. To learn more - see the troubleshooting article for error AADSTS75005."
+    },
+    {
+        "ErrorCode": "7500514",
+        "ErrorCodeName": "AADSTS7500514",
+        "ErrorDescription": "A supported type of SAML response was not found. The supported response types are 'Response' (in XML namespace 'urn:oasis:names:tc:SAML:2.0:protocol') or 'Assertion' (in XML namespace 'urn:oasis:names:tc:SAML:2.0:assertion'). Application error - the developer will handle this error."
+    },
+    {
+        "ErrorCode": "750054",
+        "ErrorCodeName": "AADSTS750054",
+        "ErrorDescription": "SAMLRequest or SAMLResponse must be present as query string parameters in HTTP request for SAML Redirect binding. To learn more - see the troubleshooting article for error AADSTS750054."
+    },
+    {
+        "ErrorCode": "75008",
+        "ErrorCodeName": "AADSTS75008",
+        "ErrorDescription": "RequestDeniedError - The request from the app was denied since the SAML request had an unexpected destination."
+    },
+    {
+        "ErrorCode": "75011",
+        "ErrorCodeName": "AADSTS75011",
+        "ErrorDescription": "NoMatchedAuthnContextInOutputClaims - The authentication method by which the user authenticated with the service doesn't match requested authentication method. To learn more - see the troubleshooting article for error AADSTS75011."
+    },
+    {
+        "ErrorCode": "75016",
+        "ErrorCodeName": "AADSTS75016",
+        "ErrorDescription": "Saml2AuthenticationRequestInvalidNameIDPolicy - SAML2 Authentication Request has invalid NameIdPolicy."
+    },
+    {
+        "ErrorCode": "76021",
+        "ErrorCodeName": "AADSTS76021",
+        "ErrorDescription": "ApplicationRequiresSignedRequests - The request sent by client is not signed while the application requires signed requests"
+    },
+    {
+        "ErrorCode": "76026",
+        "ErrorCodeName": "AADSTS76026",
+        "ErrorDescription": "RequestIssueTimeExpired - IssueTime in an SAML2 Authentication Request is expired."
+    },
+    {
+        "ErrorCode": "80001",
+        "ErrorCodeName": "AADSTS80001",
+        "ErrorDescription": "OnPremiseStoreIsNotAvailable - The Authentication Agent is unable to connect to Active Directory. Make sure that agent servers are members of the same AD forest as the users whose passwords need to be validated and they are able to connect to Active Directory."
+    },
+    {
+        "ErrorCode": "80002",
+        "ErrorCodeName": "AADSTS80002",
+        "ErrorDescription": "OnPremisePasswordValidatorRequestTimedout - Password validation request timed out. Make sure that Active Directory is available and responding to requests from the agents."
+    },
+    {
+        "ErrorCode": "80005",
+        "ErrorCodeName": "AADSTS80005",
+        "ErrorDescription": "OnPremisePasswordValidatorUnpredictableWebException - An unknown error occurred while processing the response from the Authentication Agent. Retry the request. If it continues to fail - open a support ticket to get more details on the error."
+    },
+    {
+        "ErrorCode": "80007",
+        "ErrorCodeName": "AADSTS80007",
+        "ErrorDescription": "OnPremisePasswordValidatorErrorOccurredOnPrem - The Authentication Agent is unable to validate user's password. Check the agent logs for more info and verify that Active Directory is operating as expected."
+    },
+    {
+        "ErrorCode": "80010",
+        "ErrorCodeName": "AADSTS80010",
+        "ErrorDescription": "OnPremisePasswordValidationEncryptionException - The Authentication Agent is unable to decrypt password."
+    },
+    {
+        "ErrorCode": "80012",
+        "ErrorCodeName": "AADSTS80012",
+        "ErrorDescription": "OnPremisePasswordValidationAccountLogonInvalidHours - The users attempted to log on outside of the allowed hours (this is specified in AD)."
+    },
+    {
+        "ErrorCode": "80013",
+        "ErrorCodeName": "AADSTS80013",
+        "ErrorDescription": "OnPremisePasswordValidationTimeSkew - The authentication attempt couldn't be completed due to time skew between the machine running the authentication agent and AD. Fix time sync issues."
+    },
+    {
+        "ErrorCode": "80014",
+        "ErrorCodeName": "AADSTS80014",
+        "ErrorDescription": "OnPremisePasswordValidationAuthenticationAgentTimeout - Validation request responded after maximum elapsed time exceeded. Open a support ticket with the error code - correlation ID - and timestamp to get more details on this error."
+    },
+    {
+        "ErrorCode": "81004",
+        "ErrorCodeName": "AADSTS81004",
+        "ErrorDescription": "DesktopSsoIdentityInTicketIsNotAuthenticated - Kerberos authentication attempt failed."
+    },
+    {
+        "ErrorCode": "81005",
+        "ErrorCodeName": "AADSTS81005",
+        "ErrorDescription": "DesktopSsoAuthenticationPackageNotSupported - The authentication package isn't supported."
+    },
+    {
+        "ErrorCode": "81006",
+        "ErrorCodeName": "AADSTS81006",
+        "ErrorDescription": "DesktopSsoNoAuthorizationHeader - No authorization header was found."
+    },
+    {
+        "ErrorCode": "81007",
+        "ErrorCodeName": "AADSTS81007",
+        "ErrorDescription": "DesktopSsoTenantIsNotOptIn - The tenant isn't enabled for Seamless SSO."
+    },
+    {
+        "ErrorCode": "81009",
+        "ErrorCodeName": "AADSTS81009",
+        "ErrorDescription": "DesktopSsoAuthorizationHeaderValueWithBadFormat - Unable to validate user's Kerberos ticket."
+    },
+    {
+        "ErrorCode": "81010",
+        "ErrorCodeName": "AADSTS81010",
+        "ErrorDescription": "DesktopSsoAuthTokenInvalid - Seamless SSO failed because the user's Kerberos ticket has expired or is invalid."
+    },
+    {
+        "ErrorCode": "81011",
+        "ErrorCodeName": "AADSTS81011",
+        "ErrorDescription": "DesktopSsoLookupUserBySidFailed - Unable to find user object based on information in the user's Kerberos ticket."
+    },
+    {
+        "ErrorCode": "81012",
+        "ErrorCodeName": "AADSTS81012",
+        "ErrorDescription": "DesktopSsoMismatchBetweenTokenUpnAndChosenUpn - The user trying to sign in to Microsoft Entra ID is different from the user signed into the device."
+    },
+    {
+        "ErrorCode": "90002",
+        "ErrorCodeName": "AADSTS90002",
+        "ErrorDescription": "InvalidTenantName - The tenant name wasn't found in the data store. Check to make sure you have the correct tenant ID. The application developer will receive this error if their app attempts to sign into a tenant that we cannot find. Often - this is because a cross-cloud app was used against the wrong cloud - or the developer attempted to sign in to a tenant derived from an email address - but the domain isn't registered."
+    },
+    {
+        "ErrorCode": "90004",
+        "ErrorCodeName": "AADSTS90004",
+        "ErrorDescription": "InvalidRequestFormat - The request isn't properly formatted."
+    },
+    {
+        "ErrorCode": "90005",
+        "ErrorCodeName": "AADSTS90005",
+        "ErrorDescription": "InvalidRequestWithMultipleRequirements - Unable to complete the request. The request isn't valid because the identifier and login hint can't be used together."
+    },
+    {
+        "ErrorCode": "90006",
+        "ErrorCodeName": "AADSTS90006",
+        "ErrorDescription": "ExternalServerRetryableError - The service is temporarily unavailable."
+    },
+    {
+        "ErrorCode": "90007",
+        "ErrorCodeName": "AADSTS90007",
+        "ErrorDescription": "InvalidSessionId - Bad request. The passed session ID can't be parsed."
+    },
+    {
+        "ErrorCode": "90008",
+        "ErrorCodeName": "AADSTS90008",
+        "ErrorDescription": "TokenForItselfRequiresGraphPermission - The user or administrator hasn't consented to use the application. At the minimum - the application requires access to Microsoft Entra ID by specifying the sign-in and read user profile permission."
+    },
+    {
+        "ErrorCode": "90009",
+        "ErrorCodeName": "AADSTS90009",
+        "ErrorDescription": "TokenForItselfMissingIdenticalAppIdentifier - The application is requesting a token for itself. This scenario is supported only if the resource that's specified is using the GUID-based application ID."
+    },
+    {
+        "ErrorCode": "90010",
+        "ErrorCodeName": "AADSTS90010",
+        "ErrorDescription": "NotSupported - Unable to create the algorithm."
+    },
+    {
+        "ErrorCode": "9001023",
+        "ErrorCodeName": "AADSTS9001023",
+        "ErrorDescription": "The grant type isn't supported over the /common or /consumers endpoints. Please use the /organizations or tenant-specific endpoint."
+    },
+    {
+        "ErrorCode": "90012",
+        "ErrorCodeName": "AADSTS90012",
+        "ErrorDescription": "RequestTimeout - The requested has timed out."
+    },
+    {
+        "ErrorCode": "90013",
+        "ErrorCodeName": "AADSTS90013",
+        "ErrorDescription": "InvalidUserInput - The input from the user isn't valid."
+    },
+    {
+        "ErrorCode": "90014",
+        "ErrorCodeName": "AADSTS90014",
+        "ErrorDescription": "MissingRequiredField - This error code might appear in various cases when an expected field isn't present in the credential."
+    },
+    {
+        "ErrorCode": "900144",
+        "ErrorCodeName": "AADSTS900144",
+        "ErrorDescription": "The request body must contain the following parameter: '{name}'. Developer error - the app is attempting to sign in without the necessary or correct authentication parameters."
+    },
+    {
+        "ErrorCode": "90015",
+        "ErrorCodeName": "AADSTS90015",
+        "ErrorDescription": "QueryStringTooLong - The query string is too long."
+    },
+    {
+        "ErrorCode": "90016",
+        "ErrorCodeName": "AADSTS90016",
+        "ErrorDescription": "MissingRequiredClaim - The access token isn't valid. The required claim is missing."
+    },
+    {
+        "ErrorCode": "90019",
+        "ErrorCodeName": "AADSTS90019",
+        "ErrorDescription": "MissingTenantRealm - Microsoft Entra ID was unable to determine the tenant identifier from the request."
+    },
+    {
+        "ErrorCode": "90020",
+        "ErrorCodeName": "AADSTS90020",
+        "ErrorDescription": "The SAML 1.1 Assertion is missing ImmutableID of the user. Developer error - the app is attempting to sign in without the necessary or correct authentication parameters."
+    },
+    {
+        "ErrorCode": "90022",
+        "ErrorCodeName": "AADSTS90022",
+        "ErrorDescription": "AuthenticatedInvalidPrincipalNameFormat - The principal name format isn't valid - or doesn't meet the expected name[/host][@realm] format. The principal name is required - host - and realm are optional and can be set to null."
+    },
+    {
+        "ErrorCode": "90023",
+        "ErrorCodeName": "AADSTS90023",
+        "ErrorDescription": "InvalidRequest - The authentication service request isn't valid."
+    },
+    {
+        "ErrorCode": "900236",
+        "ErrorCodeName": "AADSTS900236",
+        "ErrorDescription": "InvalidRequestSamlPropertyUnsupported- The SAML authentication request property '{propertyName}' isn't supported and must not be set."
+    },
+    {
+        "ErrorCode": "9002313",
+        "ErrorCodeName": "AADSTS9002313",
+        "ErrorDescription": "InvalidRequest - Request is malformed or invalid. - The issue arises because there was something wrong with the request to a certain endpoint. The suggestion to this issue is to get a fiddler trace of the error occurring and looking to see if the request is properly formatted or not."
+    },
+    {
+        "ErrorCode": "9002332",
+        "ErrorCodeName": "AADSTS9002332",
+        "ErrorDescription": "Application '{principalId}'({principalName}) is configured for use by Microsoft Entra users only. Please do not use the /consumers endpoint to serve this request."
+    },
+    {
+        "ErrorCode": "90024",
+        "ErrorCodeName": "AADSTS90024",
+        "ErrorDescription": "RequestBudgetExceededError - A transient error has occurred. Try again."
+    },
+    {
+        "ErrorCode": "90027",
+        "ErrorCodeName": "AADSTS90027",
+        "ErrorDescription": "We are unable to issue tokens from this API version on the MSA tenant. Please contact the application vendor as they need to use version 2.0 of the protocol to support this."
+    },
+    {
+        "ErrorCode": "90033",
+        "ErrorCodeName": "AADSTS90033",
+        "ErrorDescription": "MsodsServiceUnavailable - The Microsoft Online Directory Service (MSODS) isn't available."
+    },
+    {
+        "ErrorCode": "90036",
+        "ErrorCodeName": "AADSTS90036",
+        "ErrorDescription": "MsodsServiceUnretryableFailure - An unexpected - non-retryable error from the WCF service hosted by MSODS has occurred. Open a support ticket to get more details on the error."
+    },
+    {
+        "ErrorCode": "90038",
+        "ErrorCodeName": "AADSTS90038",
+        "ErrorDescription": "NationalCloudTenantRedirection - The specified tenant 'Y' belongs to the National Cloud 'X'. Current cloud instance 'Z' does not federate with X. A cloud redirect error is returned."
+    },
+    {
+        "ErrorCode": "900384",
+        "ErrorCodeName": "AADSTS900384",
+        "ErrorDescription": "JWT token failed signature validation. Actual message content is runtime specific - there are a variety of causes for this error. Please see the returned exception message for details."
+    },
+    {
+        "ErrorCode": "90043",
+        "ErrorCodeName": "AADSTS90043",
+        "ErrorDescription": "NationalCloudAuthCodeRedirection - The feature is disabled."
+    },
+    {
+        "ErrorCode": "900432",
+        "ErrorCodeName": "AADSTS900432",
+        "ErrorDescription": "Confidential Client isn't supported in Cross Cloud request."
+    },
+    {
+        "ErrorCode": "90051",
+        "ErrorCodeName": "AADSTS90051",
+        "ErrorDescription": "InvalidNationalCloudId - The national cloud identifier contains an invalid cloud identifier."
+    },
+    {
+        "ErrorCode": "90055",
+        "ErrorCodeName": "AADSTS90055",
+        "ErrorDescription": "TenantThrottlingError - There are too many incoming requests. This exception is thrown for blocked tenants."
+    },
+    {
+        "ErrorCode": "90056",
+        "ErrorCodeName": "AADSTS90056",
+        "ErrorDescription": "BadResourceRequest - To redeem the code for an access token - the app should send a POST request to the /token endpoint. Also - prior to this - you should provide an authorization code and send it in the POST request to the /token endpoint. Refer to this article for an overview of OAuth 2.0 authorization code flow. Direct the user to the /authorize endpoint - which will return an authorization_code. By posting a request to the /token endpoint - the user gets the access token. Check App registrations > Endpoints to confirm that the two endpoints were configured correctly."
+    },
+    {
+        "ErrorCode": "900561",
+        "ErrorCodeName": "AADSTS900561",
+        "ErrorDescription": "BadResourceRequestInvalidRequest - The endpoint only accepts {valid_verbs} requests. Received a {invalid_verb} request. {valid_verbs} represents a list of HTTP verbs supported by the endpoint (for example - POST) - {invalid_verb} is an HTTP verb used in the current request (for example - GET). This can be due to developer error - or due to users pressing the back button in their browser - triggering a bad request. It can be ignored."
+    },
+    {
+        "ErrorCode": "90072",
+        "ErrorCodeName": "AADSTS90072",
+        "ErrorDescription": "PassThroughUserMfaError - The external account that the user signs in with doesn't exist on the tenant that they signed into; so the user can't satisfy the MFA requirements for the tenant. This error also might occur if the users are synced - but there is a mismatch in the ImmutableID (sourceAnchor) attribute between Active Directory and Microsoft Entra ID. The account must be added as an external user in the tenant first. Sign out and sign in with a different Microsoft Entra user account. For more information - please visit configuring external identities."
+    },
+    {
+        "ErrorCode": "90081",
+        "ErrorCodeName": "AADSTS90081",
+        "ErrorDescription": "OrgIdWsFederationMessageInvalid - An error occurred when the service tried to process a WS-Federation message. The message isn't valid."
+    },
+    {
+        "ErrorCode": "90082",
+        "ErrorCodeName": "AADSTS90082",
+        "ErrorDescription": "OrgIdWsFederationNotSupported - The selected authentication policy for the request isn't currently supported."
+    },
+    {
+        "ErrorCode": "90084",
+        "ErrorCodeName": "AADSTS90084",
+        "ErrorDescription": "OrgIdWsFederationGuestNotAllowed - Guest accounts aren't allowed for this site."
+    },
+    {
+        "ErrorCode": "90085",
+        "ErrorCodeName": "AADSTS90085",
+        "ErrorDescription": "OrgIdWsFederationSltRedemptionFailed - The service is unable to issue a token because the company object hasn't been provisioned yet."
+    },
+    {
+        "ErrorCode": "90086",
+        "ErrorCodeName": "AADSTS90086",
+        "ErrorDescription": "OrgIdWsTrustDaTokenExpired - The user DA token is expired."
+    },
+    {
+        "ErrorCode": "90087",
+        "ErrorCodeName": "AADSTS90087",
+        "ErrorDescription": "OrgIdWsFederationMessageCreationFromUriFailed - An error occurred while creating the WS-Federation message from the URI."
+    },
+    {
+        "ErrorCode": "90090",
+        "ErrorCodeName": "AADSTS90090",
+        "ErrorDescription": "GraphRetryableError - The service is temporarily unavailable."
+    },
+    {
+        "ErrorCode": "90091",
+        "ErrorCodeName": "AADSTS90091",
+        "ErrorDescription": "GraphServiceUnreachable"
+    },
+    {
+        "ErrorCode": "90092",
+        "ErrorCodeName": "AADSTS90092",
+        "ErrorDescription": "GraphNonRetryableError"
+    },
+    {
+        "ErrorCode": "90093",
+        "ErrorCodeName": "AADSTS90093",
+        "ErrorDescription": "GraphUserUnauthorized - Graph returned with a forbidden error code for the request."
+    },
+    {
+        "ErrorCode": "90094",
+        "ErrorCodeName": "AADSTS90094",
+        "ErrorDescription": "AdminConsentRequired - Administrator consent is required."
+    },
+    {
+        "ErrorCode": "900382",
+        "ErrorCodeName": "AADSTS900382",
+        "ErrorDescription": "Confidential Client isn't supported in Cross Cloud request."
+    },
+    {
+        "ErrorCode": "90095",
+        "ErrorCodeName": "AADSTS90095",
+        "ErrorDescription": "AdminConsentRequiredRequestAccess- In the Admin Consent Workflow experience - an interrupt that appears when the user is told they need to ask the admin for consent."
+    },
+    {
+        "ErrorCode": "90099",
+        "ErrorCodeName": "AADSTS90099",
+        "ErrorDescription": "The application '{appId}' ({appName}) has not been authorized in the tenant '{tenant}'. Applications must be authorized to access the external tenant before partner delegated administrators can use them. Provide pre-consent or execute the appropriate Partner Center API to authorize the application."
+    },
+    {
+        "ErrorCode": "900971",
+        "ErrorCodeName": "AADSTS900971",
+        "ErrorDescription": "No reply address provided."
+    },
+    {
+        "ErrorCode": "90100",
+        "ErrorCodeName": "AADSTS90100",
+        "ErrorDescription": "InvalidRequestParameter - The parameter is empty or not valid."
+    },
+    {
+        "ErrorCode": "901002",
+        "ErrorCodeName": "AADSTS901002",
+        "ErrorDescription": "AADSTS901002: The 'resource' request parameter isn't supported."
+    },
+    {
+        "ErrorCode": "90101",
+        "ErrorCodeName": "AADSTS90101",
+        "ErrorDescription": "InvalidEmailAddress - The supplied data isn't a valid email address. The email address must be in the format someone@example.com."
+    },
+    {
+        "ErrorCode": "90102",
+        "ErrorCodeName": "AADSTS90102",
+        "ErrorDescription": "InvalidUriParameter - The value must be a valid absolute URI."
+    },
+    {
+        "ErrorCode": "90107",
+        "ErrorCodeName": "AADSTS90107",
+        "ErrorDescription": "InvalidXml - The request isn't valid. Make sure your data doesn't have invalid characters."
+    },
+    {
+        "ErrorCode": "90112",
+        "ErrorCodeName": "AADSTS90112",
+        "ErrorDescription": "Application identifier is expected to be a GUID."
+    },
+    {
+        "ErrorCode": "90114",
+        "ErrorCodeName": "AADSTS90114",
+        "ErrorDescription": "InvalidExpiryDate - The bulk token expiration timestamp will cause an expired token to be issued."
+    },
+    {
+        "ErrorCode": "90117",
+        "ErrorCodeName": "AADSTS90117",
+        "ErrorDescription": "InvalidRequestInput"
+    },
+    {
+        "ErrorCode": "90119",
+        "ErrorCodeName": "AADSTS90119",
+        "ErrorDescription": "InvalidUserCode - The user code is null or empty."
+    },
+    {
+        "ErrorCode": "90120",
+        "ErrorCodeName": "AADSTS90120",
+        "ErrorDescription": "InvalidDeviceFlowRequest - The request was already authorized or declined."
+    },
+    {
+        "ErrorCode": "90121",
+        "ErrorCodeName": "AADSTS90121",
+        "ErrorDescription": "InvalidEmptyRequest - Invalid empty request."
+    },
+    {
+        "ErrorCode": "90123",
+        "ErrorCodeName": "AADSTS90123",
+        "ErrorDescription": "IdentityProviderAccessDenied - The token can't be issued because the identity or claim issuance provider denied the request."
+    },
+    {
+        "ErrorCode": "90124",
+        "ErrorCodeName": "AADSTS90124",
+        "ErrorDescription": "V1ResourceV2GlobalEndpointNotSupported - The resource isn't supported over the /common or /consumers endpoints. Use the /organizations or tenant-specific endpoint instead."
+    },
+    {
+        "ErrorCode": "90125",
+        "ErrorCodeName": "AADSTS90125",
+        "ErrorDescription": "DebugModeEnrollTenantNotFound - The user isn't in the system. Make sure you entered the user name correctly."
+    },
+    {
+        "ErrorCode": "90126",
+        "ErrorCodeName": "AADSTS90126",
+        "ErrorDescription": "DebugModeEnrollTenantNotInferred - The user type isn't supported on this endpoint. The system can't infer the user's tenant from the user name."
+    },
+    {
+        "ErrorCode": "90130",
+        "ErrorCodeName": "AADSTS90130",
+        "ErrorDescription": "NonConvergedAppV2GlobalEndpointNotSupported - The application isn't supported over the /common or /consumers endpoints. Use the /organizations or tenant-specific endpoint instead."
+    },
+    {
+        "ErrorCode": "120000",
+        "ErrorCodeName": "AADSTS120000",
+        "ErrorDescription": "PasswordChangeIncorrectCurrentPassword"
+    },
+    {
+        "ErrorCode": "120002",
+        "ErrorCodeName": "AADSTS120002",
+        "ErrorDescription": "PasswordChangeInvalidNewPasswordWeak"
+    },
+    {
+        "ErrorCode": "120003",
+        "ErrorCodeName": "AADSTS120003",
+        "ErrorDescription": "PasswordChangeInvalidNewPasswordContainsMemberName"
+    },
+    {
+        "ErrorCode": "120004",
+        "ErrorCodeName": "AADSTS120004",
+        "ErrorDescription": "PasswordChangeOnPremComplexity"
+    },
+    {
+        "ErrorCode": "120005",
+        "ErrorCodeName": "AADSTS120005",
+        "ErrorDescription": "PasswordChangeOnPremSuccessCloudFail"
+    },
+    {
+        "ErrorCode": "120008",
+        "ErrorCodeName": "AADSTS120008",
+        "ErrorDescription": "PasswordChangeAsyncJobStateTerminated - A non-retryable error has occurred."
+    },
+    {
+        "ErrorCode": "120011",
+        "ErrorCodeName": "AADSTS120011",
+        "ErrorDescription": "PasswordChangeAsyncUpnInferenceFailed"
+    },
+    {
+        "ErrorCode": "120012",
+        "ErrorCodeName": "AADSTS120012",
+        "ErrorDescription": "PasswordChangeNeedsToHappenOnPrem"
+    },
+    {
+        "ErrorCode": "120013",
+        "ErrorCodeName": "AADSTS120013",
+        "ErrorDescription": "PasswordChangeOnPremisesConnectivityFailure"
+    },
+    {
+        "ErrorCode": "120014",
+        "ErrorCodeName": "AADSTS120014",
+        "ErrorDescription": "PasswordChangeOnPremUserAccountLockedOutOrDisabled"
+    },
+    {
+        "ErrorCode": "120015",
+        "ErrorCodeName": "AADSTS120015",
+        "ErrorDescription": "PasswordChangeADAdminActionRequired"
+    },
+    {
+        "ErrorCode": "120016",
+        "ErrorCodeName": "AADSTS120016",
+        "ErrorDescription": "PasswordChangeUserNotFoundBySspr"
+    },
+    {
+        "ErrorCode": "120018",
+        "ErrorCodeName": "AADSTS120018",
+        "ErrorDescription": "PasswordChangePasswordDoesnotComplyFuzzyPolicy"
+    },
+    {
+        "ErrorCode": "120020",
+        "ErrorCodeName": "AADSTS120020",
+        "ErrorDescription": "PasswordChangeFailure"
+    },
+    {
+        "ErrorCode": "120021",
+        "ErrorCodeName": "AADSTS120021",
+        "ErrorDescription": "PartnerServiceSsprInternalServiceError"
+    },
+    {
+        "ErrorCode": "130004",
+        "ErrorCodeName": "AADSTS130004",
+        "ErrorDescription": "NgcKeyNotFound - The user principal doesn't have the NGC ID key configured."
+    },
+    {
+        "ErrorCode": "130005",
+        "ErrorCodeName": "AADSTS130005",
+        "ErrorDescription": "NgcInvalidSignature - NGC key signature verified failed."
+    },
+    {
+        "ErrorCode": "130006",
+        "ErrorCodeName": "AADSTS130006",
+        "ErrorDescription": "NgcTransportKeyNotFound - The NGC transport key isn't configured on the device."
+    },
+    {
+        "ErrorCode": "130007",
+        "ErrorCodeName": "AADSTS130007",
+        "ErrorDescription": "NgcDeviceIsDisabled - The device is disabled."
+    },
+    {
+        "ErrorCode": "130008",
+        "ErrorCodeName": "AADSTS130008",
+        "ErrorDescription": "NgcDeviceIsNotFound - The device referenced by the NGC key wasn't found."
+    },
+    {
+        "ErrorCode": "135010",
+        "ErrorCodeName": "AADSTS135010",
+        "ErrorDescription": "KeyNotFound"
+    },
+    {
+        "ErrorCode": "135011",
+        "ErrorCodeName": "AADSTS135011",
+        "ErrorDescription": "Device used during the authentication is disabled."
+    },
+    {
+        "ErrorCode": "140000",
+        "ErrorCodeName": "AADSTS140000",
+        "ErrorDescription": "InvalidRequestNonce - Request nonce isn't provided."
+    },
+    {
+        "ErrorCode": "140001",
+        "ErrorCodeName": "AADSTS140001",
+        "ErrorDescription": "InvalidSessionKey - The session key isn't valid."
+    },
+    {
+        "ErrorCode": "165004",
+        "ErrorCodeName": "AADSTS165004",
+        "ErrorDescription": "Actual message content is runtime specific. Please see returned exception message for details."
+    },
+    {
+        "ErrorCode": "165900",
+        "ErrorCodeName": "AADSTS165900",
+        "ErrorDescription": "InvalidApiRequest - Invalid request."
+    },
+    {
+        "ErrorCode": "220450",
+        "ErrorCodeName": "AADSTS220450",
+        "ErrorDescription": "UnsupportedAndroidWebViewVersion - The Chrome WebView version isn't supported."
+    },
+    {
+        "ErrorCode": "220501",
+        "ErrorCodeName": "AADSTS220501",
+        "ErrorDescription": "InvalidCrlDownload"
+    },
+    {
+        "ErrorCode": "221000",
+        "ErrorCodeName": "AADSTS221000",
+        "ErrorDescription": "DeviceOnlyTokensNotSupportedByResource - The resource isn't configured to accept device-only tokens."
+    },
+    {
+        "ErrorCode": "240001",
+        "ErrorCodeName": "AADSTS240001",
+        "ErrorDescription": "BulkAADJTokenUnauthorized - The user isn't authorized to register devices in Microsoft Entra ID."
+    },
+    {
+        "ErrorCode": "240002",
+        "ErrorCodeName": "AADSTS240002",
+        "ErrorDescription": "RequiredClaimIsMissing - The id_token can't be used as urn:ietf:params:oauth:grant-type:jwt-bearer grant."
+    },
+    {
+        "ErrorCode": "501621",
+        "ErrorCodeName": "AADSTS501621",
+        "ErrorDescription": "ClaimsTransformationTimeoutRegularExpressionTimeout - Regular expression replacement for claims transformation has timed out. This indicates a too complex regular expression may have been configured for this application. A retry of the request may succeed. Otherwise - please contact your admin to fix the configuration."
+    },
+    {
+        "ErrorCode": "530032",
+        "ErrorCodeName": "AADSTS530032",
+        "ErrorDescription": "BlockedByConditionalAccessOnSecurityPolicy - The tenant admin has configured a security policy that blocks this request. Check the security policies that are defined on the tenant level to determine if your request meets the policy requirements."
+    },
+    {
+        "ErrorCode": "700016",
+        "ErrorCodeName": "AADSTS700016",
+        "ErrorDescription": "UnauthorizedClient_DoesNotMatchRequest - The application wasn't found in the directory/tenant. This can happen if the application has not been installed by the administrator of the tenant or consented to by any user in the tenant. You might have misconfigured the identifier value for the application or sent your authentication request to the wrong tenant."
+    },
+    {
+        "ErrorCode": "700020",
+        "ErrorCodeName": "AADSTS700020",
+        "ErrorDescription": "InteractionRequired - The access grant requires interaction."
+    },
+    {
+        "ErrorCode": "700022",
+        "ErrorCodeName": "AADSTS700022",
+        "ErrorDescription": "InvalidMultipleResourcesScope - The provided value for the input parameter scope isn't valid because it contains more than one resource."
+    },
+    {
+        "ErrorCode": "700023",
+        "ErrorCodeName": "AADSTS700023",
+        "ErrorDescription": "InvalidResourcelessScope - The provided value for the input parameter scope isn't valid when requesting an access token."
+    },
+    {
+        "ErrorCode": "7000215",
+        "ErrorCodeName": "AADSTS7000215",
+        "ErrorDescription": "Invalid client secret is provided. Developer error - the app is attempting to sign in without the necessary or correct authentication parameters."
+    },
+    {
+        "ErrorCode": "7000218",
+        "ErrorCodeName": "AADSTS7000218",
+        "ErrorDescription": "The request body must contain the following parameter: 'client_assertion' or 'client_secret'."
+    },
+    {
+        "ErrorCode": "7000222",
+        "ErrorCodeName": "AADSTS7000222",
+        "ErrorDescription": "InvalidClientSecretExpiredKeysProvided - The provided client secret keys are expired. Create new keys for your app - or consider using certificate credentials for added security: https://aka.ms/certCreds"
+    },
+    {
+        "ErrorCode": "700229",
+        "ErrorCodeName": "AADSTS700229",
+        "ErrorDescription": "ForbiddenTokenType- Only app-only tokens can be used as Federated Identity Credentials for Microsoft Entra issuer. Use an app-only access token (generated during a client credentials flow) instead of a user-delegated access token (representing a request coming from a user context)."
+    },
+    {
+        "ErrorCode": "700005",
+        "ErrorCodeName": "AADSTS700005",
+        "ErrorDescription": "InvalidGrantRedeemAgainstWrongTenant - Provided Authorization Code is intended to use against other tenant - thus rejected. OAuth2 Authorization Code must be redeemed against same tenant it was acquired for (/common or /{tenant-ID} as appropriate)"
+    },
+    {
+        "ErrorCode": "1000000",
+        "ErrorCodeName": "AADSTS1000000",
+        "ErrorDescription": "UserNotBoundError - The Bind API requires the Microsoft Entra user to also authenticate with an external IDP - which hasn't happened yet."
+    },
+    {
+        "ErrorCode": "1000002",
+        "ErrorCodeName": "AADSTS1000002",
+        "ErrorDescription": "BindCompleteInterruptError - The bind completed successfully - but the user must be informed."
+    },
+    {
+        "ErrorCode": "100007",
+        "ErrorCodeName": "AADSTS100007",
+        "ErrorDescription": "Microsoft Entra Regional ONLY supports auth either for MSIs OR for requests from MSAL using SN+I for 1P apps or 3P apps in Microsoft infrastructure tenants."
+    },
+    {
+        "ErrorCode": "1000031",
+        "ErrorCodeName": "AADSTS1000031",
+        "ErrorDescription": "Application {appDisplayName} can't be accessed at this time. Contact your administrator."
+    },
+    {
+        "ErrorCode": "7000112",
+        "ErrorCodeName": "AADSTS7000112",
+        "ErrorDescription": "UnauthorizedClientApplicationDisabled - The application is disabled."
+    },
+    {
+        "ErrorCode": "7000114",
+        "ErrorCodeName": "AADSTS7000114",
+        "ErrorDescription": "Application 'appIdentifier' isn't allowed to make application on-behalf-of calls."
+    },
+    {
+        "ErrorCode": "7500529",
+        "ErrorCodeName": "AADSTS7500529",
+        "ErrorDescription": "The value âSAMLId-Guid' isn't a valid SAML ID - Microsoft Entra ID uses this attribute to populate the InResponseTo attribute of the returned response. ID must not begin with a number - so a common strategy is to prepend a string like ID to the string representation of a GUID. For example - id6c1c178c166d486687be4aaf5e482730 is a valid ID."
+    },
+    {
+        "ErrorCode": "9002341",
+        "ErrorCodeName": "AADSTS9002341",
+        "ErrorDescription": "V2Error: invalid_grant - The user is required to permit single sign-On (SSO). This error occurs when the user has not granted the necessary permissions for the application to perform SSO. The user should be redirected to the consent screen to grant the necessary permissions. Refer to this announcement for more information.\n901011,AADSTS901011,NoEmailAddressCollectedFromExternalOidcIDP - No email address was obtained from the external OpenID Connect (OIDC) identity provider. This usually happens when the user selects Hide my email upon signing up.\n901012,AADSTS901012,EmailAddressCollectedFromExternalOidcIDPNotVerified - No verified email address was obtained from the identity provider. The email address is not verified in the ID token from the external OIDC identity provider.\n901014,AADSTS901014,NoExternalIdentifierCollectedFromExternalOidcIDP - The external identifier does not exist in the ID token from the external OIDC identity provider.\n650059,AADSTS650059,The application is not configured for use in the tenant. The value AzureADMyOrg set for application property signInAudience is limiting its use in the tenant."
+    }
+]
