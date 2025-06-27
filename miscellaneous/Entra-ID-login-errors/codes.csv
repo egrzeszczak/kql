@@ -339,9 +339,28 @@ ErrorCode,ErrorCodeName,ErrorDescription
 1000031,AADSTS1000031,Application {appDisplayName} can't be accessed at this time. Contact your administrator.
 7000112,AADSTS7000112,UnauthorizedClientApplicationDisabled - The application is disabled.
 7000114,AADSTS7000114,Application 'appIdentifier' isn't allowed to make application on-behalf-of calls.
-7500529,AADSTS7500529,The value ‘SAMLId-Guid' isn't a valid SAML ID - Microsoft Entra ID uses this attribute to populate the InResponseTo attribute of the returned response. ID must not begin with a number - so a common strategy is to prepend a string like "ID" to the string representation of a GUID. For example - id6c1c178c166d486687be4aaf5e482730 is a valid ID.
+7500529,AADSTS7500529,The value 'SAMLId-Guid' isn't a valid SAML ID - Microsoft Entra ID uses this attribute to populate the InResponseTo attribute of the returned response. ID must not begin with a number - so a common strategy is to prepend a string like "ID" to the string representation of a GUID. For example - id6c1c178c166d486687be4aaf5e482730 is a valid ID.
 9002341,AADSTS9002341,V2Error: invalid_grant - The user is required to permit single sign-On (SSO). This error occurs when the user has not granted the necessary permissions for the application to perform SSO. The user should be redirected to the consent screen to grant the necessary permissions. Refer to this announcement for more information."
 901011,AADSTS901011,NoEmailAddressCollectedFromExternalOidcIDP - No email address was obtained from the external OpenID Connect (OIDC) identity provider. This usually happens when the user selects Hide my email upon signing up.
 901012,AADSTS901012,EmailAddressCollectedFromExternalOidcIDPNotVerified - No verified email address was obtained from the identity provider. The email address is not verified in the ID token from the external OIDC identity provider.
 901014,AADSTS901014,NoExternalIdentifierCollectedFromExternalOidcIDP - The external identifier does not exist in the ID token from the external OIDC identity provider.
 650059,AADSTS650059,The application is not configured for use in the tenant. The value AzureADMyOrg set for application property signInAudience is limiting its use in the tenant.
+500571,AADSTS500571,The guest user account is disabled.
+5000611,AADSTS5000611,Symmetric Key Derivation Function version '{version}' is invalid. Update the device for the latest updates. '{optionalMessage}'
+500121,AADSTS500121,Authentication failed during strong authentication request. The user didn't complete the MFA prompt. They may have decided not to authenticate timed out while doing other work or has an issue with their authentication setup.
+530002,AADSTS530002,Your device is required to be compliant to access this resource. The requested resource can only be accessed using a compliant device. The user is using a device already managed by a Mobile-Device-Management (MDM) agent like Intune but it's not being reported as compliant yet. The user could check with your MDM provider on how to become compliant. More details available at https://support.microsoft.com/account-billing/troubleshooting-compliance-error-messages-for-a-work-or-school-account-479a9c42-d9d1-4e44-9e90-24bbad96c251
+7000022,AADSTS7000022,VSM Binding Key missing from Ticket Granting Ticket request.
+399218,AADSTS399218,For security reasons user confirmation is required to sign in to this tenant.
+1003033,AADSTS1003033,The remote ngc session was denied.
+530003,AADSTS530003,Your device is required to be managed to access this resource. The requested resource can only be accessed using a compliant device. The user is either using a device not managed by a Mobile-Device-Management (MDM) agent like Intune or it's using an application that doesn't support device authentication. The user could enroll their devices with an approved MDM provider or use a different app to sign in or find the app vendor and ask them to update their app. More details available at https://support.microsoft.com/account-billing/troubleshooting-compliance-error-messages-for-a-work-or-school-account-479a9c42-d9d1-4e44-9e90-24bbad96c251
+70044,AADSTS70044,The session has expired or is invalid due to sign-in frequency checks by conditional access.
+54006,AADSTS54006,Unencrypted v2 access tokens are not supported for first party applications that support consumer accounts. The resource must add a certificate to the onboarding portal to encrypt tokens.
+50201,AADSTS50201,This message prompt interrupt will be shown to the user during login when additional information should be provided to user.
+500142,AADSTS500142,The user's redemption is complete and the sign-in should continue.
+501314,AADSTS501314,Silent interrupt required to recognize browser capabilities. Used to differentiate between Safari running in iPadOS or Mac. No action required this is expected as part of determining device identities due to application or conditional access requirements.
+530036,AADSTS530036,The refresh token is invalid due to authentication flow checks by Conditional Access. Additionally since the authentication flows policy applies to all applications the token will never be usable and should be deleted. The token presented to Entra is protocol tracked as either device code flow or authentication transfer resulting in Conditional Access policy enforcement. Interaction is required in order to obtain a new token. For additional information please visit https://aka.ms/authenticationflows
+399287,AADSTS399287,Multi-factor authentication method is blocked.
+9002342,AADSTS9002342,User denied SSO permission.
+70037,AADSTS70037,Incorrect challenge response provided. Remote auth session denied.
+50181,AADSTS50181,Unable to validate the otp.
+700007,AADSTS700007,The grant was issued for a different client id.
