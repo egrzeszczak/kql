@@ -1,0 +1,9 @@
+// You can also use https://login.microsoftonline.com/error to check for code descriptions
+let ResolvedErrorCodes = externaldata(ErrorCode: int, ErrorCodeName: string, ErrorDescription: string)['https://raw.githubusercontent.com/egrzeszczak/kql/refs/heads/master/miscellaneous/Entra-ID-login-errors/codes.json'] with (format='multijson');
+AADSignInEventsBeta 
+| where ErrorCode != 0
+| lookup ResolvedErrorCodes on $left.ErrorCode == $right.ErrorCode
+| summarize count(), Users=make_set(AccountDisplayName),Applications=make_set(Application) by ErrorDescription,ErrorCode
+| project ErrorCode,ErrorDescription,count_,Users,Applications
+| sort by count_ desc 
+// | where isempty(ErrorDescription) | project ErrorCode

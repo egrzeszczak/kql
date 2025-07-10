@@ -1883,5 +1883,20 @@
         "ErrorCode": "530001",
         "ErrorCodeName": "AADSTS530001",
         "ErrorDescription": "Browser not supported. The user is using a browser that does not support device identification so the device state is unknown. Access to the resource requires a compliant device. To see a list of browsers that support device identification see https://learn.microsoft.com/entra/identity/conditional-access/concept-conditional-access-conditions#supported-browsers"
+    },
+    {
+        "ErrorCode": "5002726",
+        "ErrorCodeName": "AADSTS5002726",
+        "ErrorDescription": "Invalid JWT token. Found unsupported token header. Supported headers are runtime specific based on keys."
+    },
+    {
+        "ErrorCode": "501811",
+        "ErrorCodeName": "AADSTS501811",
+        "ErrorDescription": "OTP is incorrect, or no cache entry exists for the tenant/user."
+    },
+    {
+        "ErrorCode": "90025",
+        "ErrorCodeName": "AADSTS90025",
+        "ErrorDescription": "Request processing has exceeded internal allowance. This operation will be retried internally and usually resolves without user impact. Please verify the end result of the transaction to verify status."
     }
 ]
