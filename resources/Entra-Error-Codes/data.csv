@@ -185,7 +185,7 @@
 "53006","Authentication required from federated idP.","AuthenticationRequired"
 "53007","Authentication required from federated IDP.","AuthenticationRequired"
 "53008","Browser not supported.","BrowserUnsupported"
-"53009","Application needs to enforce Intune protection policies.","Application"
+"53009","Application needs to enforce Intune protection policies.","EnforcementRequired"
 "53010","Cannot configure multi-factor authentication methods because the organization requires this information to be set from specific locations or devices.","RegistrationInterrupted"
 "53011","User blocked due to risk on home tenant.","UserUnauthorized"
 "54000","User is not allowed to access application {appName} due to Legal Age Group Requirement of application {audience}.","UserUnauthorized"
