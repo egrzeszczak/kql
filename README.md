@@ -18,3 +18,11 @@ A collection of my KQL queries
 |[Trusted domain blocked by Defender](./detection-rules/Trusted-domain-blocked-by-Defender/query.kql)|Checks for web filtering blocks to trusted domains. You specify trusted domains in the query.|T1071: Application Layer Protocol </br> T1071.001: Web Protocols|
 |[Win32 API called by an Office macro](./detection-rules/Win32-API-called-by-an-Office-macro/query.kql)|Attack Surface Reduction rule for Microsoft Defender for Endpoint that detects VBA macros that are trying to call Win32 APIs. </br>[Documentation &rarr;](https://learn.microsoft.com/en-us/defender-endpoint/attack-surface-reduction-rules-reference#block-win32-api-calls-from-office-macros)|T1106: Native API|
 |[XOR operator in PowerShell command](./detection-rules/XOR-operator-in-PowerShell-command/query.kql)|Detect PowerShell processes that contain XOR operators, which indicate possible defense evasion activities.|T1027: Obfuscated Files or Information </br> T1027.010: Command Obfuscation </br> T1059: Command and Scripting Interpreter </br> T1059.001: PowerShell </br> T1086: PowerShell|
+
+## Resources
+
+Additional resources to use in Advanced Hunting
+
+|Name|Description|
+|-|-|
+|[Entra-Error-Codes](./resources/Entra-Error-Codes/query.kql)|Microsoft Entra error codes with descriptions and categories|
