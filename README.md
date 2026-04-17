@@ -25,4 +25,4 @@ Additional resources to use in Advanced Hunting
 
 |Name|Description|
 |-|-|
-|[Entra-Error-Codes](./resources/Entra-Error-Codes/query.kql)|Microsoft Entra error codes with descriptions and categories|
+|[Microsoft Entra categorized error codes with descriptions](./resources/Entra-Error-Codes/query.kql)|Microsoft Entra error codes with descriptions and categories|
