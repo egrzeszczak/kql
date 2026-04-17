@@ -230,7 +230,7 @@ ErrorCode,ErrorDescription,ErrorType
 "81014","The DesktopSSO auth token has expired.","TokenExpired"
 "81015","Rejecting DesktopSSO Kerberos ticket as it was obtained through delegation. Delegated Kerberos ticket does not originate from user directly. Please contact your tenant administrator to disable delegation on the AZUREADSSOACC account.","CredentialRejected"
 "81016","Invalid STS request.","RequestInvalid"
-"90000","Internal use","MiscError","MiscError"
+"90000","Internal use","MiscError"
 "90002","Tenant '{tenant_name}' not found. Check to make sure you have the correct tenant ID and are signing into the correct cloud. Check with your subscription administrator, this may happen if there are no active subscriptions for the tenant.","TenantNonexistent"
 "90004","The request is not properly formatted.","RequestInvalid"
 "90005","Unable to complete request. The request was invalid since SID and login_hint cannot be used together.","RequestInvalid"
