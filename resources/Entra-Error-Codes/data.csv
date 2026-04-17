@@ -1,4 +1,3 @@
-"ErrorCode","ErrorDescription","ErrorType"
 "0","Success","Success"
 "16003","The user account does not exist in the directory or the user hasn't been explicitly added to the tenant. To sign into this application, the account must be added to the directory.","UserNonexistent"
 "26000","The provided access grant requires interaction.","InteractionRequired"
