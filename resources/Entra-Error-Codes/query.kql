@@ -1,0 +1,5 @@
+let EntraErrorCodesT = externaldata(ErrorCode:int, ErrorDescription:string, ErrorType:string)
+[
+    h@"https://raw.githubusercontent.com/egrzeszczak/kql/refs/heads/master/resources/Entra-Error-Codes/data.csv"
+];
+EntraErrorCodesT

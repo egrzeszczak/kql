@@ -493,10 +493,3 @@ ErrorCode,ErrorDescription,ErrorType
 "500571","The guest user account is disabled.","IdentityDisabled"
 "500581","Rendering JavaScript. Fetching sessions for single-sign-on on V2 with prompt=none requires javascript to verify if any MSA accounts are signed in.","SessionRequired"
 "500582","Microsoft Account session_id with prompt=none not supported on AAD tenant.","IdentityUnsupported"
-
-
-
-
-
-
-
