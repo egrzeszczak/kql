@@ -1,0 +1,26 @@
+//
+// Requires: functions/Identities-Targeted-By-Brute-Force
+//
+let IPAddressCountThreshold = 5;
+EntraIdSignInEvents 
+| where 
+    Timestamp > ago(14d)
+| where 
+    LogonType !contains "nonInteractiveUser" and 
+    Country != "PL" and 
+    isempty(DeviceTrustType) and 
+    ErrorCode != 0
+| project 
+    Timestamp, Application, ApplicationId, 
+    EndpointCall, ErrorCode, CorrelationId, 
+    SessionId, AccountObjectId, AccountUpn, 
+    OSPlatform, RiskLevelAggregated, RiskLevelDuringSignIn, 
+    RiskState, UserAgent, ClientAppUsed, 
+    Browser, IPAddress, Country, 
+    City, RequestId, ReportId
+| join kind=leftouter (
+        IdentitiesTargetedByBruteForce(DistinctIPThreshold=IPAddressCountThreshold)
+        | project AccountObjectId, FailedLoginCount, ApplicationCount, IPAddressCount, CountryCount, ErrorCodes, ErrorTypes
+    ) on AccountObjectId
+| where IPAddressCount > IPAddressCountThreshold
+| sort by Timestamp desc

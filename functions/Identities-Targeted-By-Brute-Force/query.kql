@@ -1,0 +1,30 @@
+// let LookbackTimespan = 72h;
+// let DistinctIPThreshold = 4;
+EntraIdSignInEvents 
+| where 
+    Timestamp > ago(LookbackTimespan)
+| where 
+    LogonType !contains "nonInteractiveUser" and 
+    Country != "PL" and 
+    isempty(DeviceTrustType) and 
+    ErrorCode != 0
+// ErrorCode lookup
+| join kind=leftouter (
+    externaldata(ErrorCode:int, ErrorDescription:string, ErrorType:string)
+    [h@"https://raw.githubusercontent.com/egrzeszczak/kql/refs/heads/master/resources/Entra-Error-Codes/data.csv"]
+    | project ErrorCode, ErrorDescription, ErrorType 
+    ) on ErrorCode
+| summarize 
+    // Group by
+    Applications=make_set(Application), EndpointCalls=make_set(EndpointCall), 
+    ErrorCodes=make_set(ErrorCode), ErrorTypes=make_set(ErrorType),
+    ErrorDescriptions=make_set(ErrorDescription), OSPlatforms=make_set(OSPlatform), 
+    UserAgents=make_set(UserAgent), ClientAppsUsed=make_set(ClientAppUsed), 
+    Browsers=make_set(Browser), IPAddresses=make_set(IPAddress), 
+    Countries=make_set(Country), 
+    // Project 
+    FailedLoginCount=count(), IPAddressCount=count_distinct(IPAddress), 
+    CountryCount=count_distinct(Country), UserAgentCount=count_distinct(UserAgent), 
+    ApplicationCount=count_distinct(Application)
+    by AccountObjectId, AccountUpn
+| where IPAddressCount > DistinctIPThreshold
